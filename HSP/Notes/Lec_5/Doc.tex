@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 5 notes and knowledge}
+\author{jdrews17}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+Preparation: Read chapter 6\\
+\begin{itemize}
+  \item \textbf{What monocular cues do we use to perceive depth?}\\
+    \textit{\begin{itemize}
+      \item Dynamic\\
+        Motion parallax\\
+        Optic flow\\
+        Delection and accretion\\
+      \item Static\\
+        Lighting-Based cues\\
+        (Atmospheric perspective, shading, cast shadows)\\
+        Size-based cues\\
+        (Familiar size, relative size, texture gradients, linear perspective)\\
+        Position-based cues\\
+        (Partial occlusion, relative height)\\
+    \end{itemize}}
+  \item \textbf{What assumptions do we use for the pictorial cues?}\\
+    \textit{Pictorial cues = the static monocular cues\\Atmospheric perspective, overlap and occlusion, linear perspective, relative height, relative size, shading and shadowing and texture gradients. The two important ones being partial occlusion and relative height}
+  \item \textbf{What is the main difference between static and dynamic depth cues?}\\
+    \textit{Static is in regards to a single image in terms of depth, this can be shading, atmospheric perspective, shadows and sizes (there's more), whereas dynamic relies on movement of either an observer or scene to give perspective of depth. This can be motion parallax, optic flow and deletion and accretion. (See above for the rest)}
+  \item \textbf{What is binocular disparity?}\\
+    \textit{The difference of the retinal images in the eyes, in relation to an object in scene changing place depending on what angle the respective eyes are looking at it.}
+  \item \textbf{Does stereopsis depend on object recognitions? Explain(She meant the same as shape stuff)}\\
+    \textit{No, Random dot stereograms as anaglyphs}
+\end{itemize}
+
+\section{Lecture}
+\subsection{Space and Depth perception}
+Assumptions we make about scenes and objects:\\
+\begin{itemize}
+  \item Scenes are lit from above.
+  \item Objects are generally viewed from above.
+  \item Surfaces are in general convex.
+  \item Objects generally rest on surfaces.
+  \item Relations between edges hold for several viewpoints(generic rather than accidental viewpoint).
+\end{itemize}
+\subsection{Examples}
+\subsection{Correspondence problem}
+Binocular, the problem is figuring out depending on the two different images in the eyes, which bits should match with whichother.\\
+Is object/shape perception a condition to achieve stereopsis? No!\\
+\subsection{Vision}
+Predators usually have monocular vision, whereas prey have binocular vision.
+\subsection{Size perception}
+Constancy scaling, when an object moves away from an observer, the object is not perceived to be shrinking, but rather be the same size.\\This can be familiar-size, linear perspective, relative size. (Trapezoid Ames room)\\
+
+\section{Knowledge}
+\begin{itemize}
+  \item Explain which monocular cues to distance perception that are the most important.\\
+    \textit{Partial occlusion and relative height(sub-part is the texture gradient)}
+  \item Explain the principles of stereopsis and how it is used for depth perception.\\
+    \textit{Stereopsis is the result of depth from the binocular disparity. (Horocopter and magical eye illusion)}
+  \item Explain how dynamic depth cues such as motion parallax work.\\
+    \textit{Objects closer to an observer will have a faster 'velocity' when passing by, whereas objects further in the distance will have less of a 'velocity'.}
+\end{itemize}
+
+\section{Important notes}
+
+
+\end{document}
+

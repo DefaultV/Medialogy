@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Arithmetic \& Morphology - IP notes}
+\author{Jannick Drews}
+\date{\today}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+Preparation: Sections 4.4.2 + 4.5 + 4.6 + chapters 13 and 6 in introduction to video and image processing.\\
+\begin{itemize}
+  \item \textbf{Morphology}
+  \item \textbf{Computing with images}
+\end{itemize}
+
+\section{Lecture}
+\subsection{Computing with images}
+\begin{itemize}
+    \item If image are different sizes, resize them to fit.
+    \item Overflow/underflow, use intermediate image(x bits higher(32 eg)) then rescale back to 255
+    \item Feature scaling\\
+        $ X' = a + \frac{(X - X_{min})(b - a)}{X_{max} - X_{min}} $
+\end{itemize}
+
+\subsection{Arithmetic Ops}
+in video:\\
+Subtacting we can remove noise(one image from the next in a sequence)\\
+Input then mean then subtract then edge detection\\
+\subsection{Logic Ops}
+Restricted to binary\\
+
+\subsection{Morphological Ops}
+\begin{itemize}
+    \item Remove noise\\
+        Remove small objets, x pixel wide objects(noise)(opening)\\
+        Fill holes(Closing)\\
+    \item Isolate objects\\
+        Remove specific shapes\\
+\end{itemize}
+(Structuring element) SE refers to kernel in compound operations.
+
+\subsection{Opening}
+Erosion + Dilation = Opening:\\
+9x3 and 3x9 SE will keep the horizontal and vertal lines in an image respectively.\\
+The bigger the SE the bigger effect on the image\\
+
+Dilation + Erosion = Closing\\
+Fill holes but keep original size\\
+
+
+\section{Knowledge}
+
+
+\section{Important notes}
+\subsection{MiniProject}
+% Each student makes a document that contains -----
+% 1) an explanation of their algorithm, 
+% 2) their code, 
+% 3) an explanation of their code and 4) a documentation of the program (show input and output) and showing the effect of different parameters on the algorithm, if any.
+% Everything is collected in ONE PDF file per student. The document should be named like this: ”your topic_your name#”.pdf
+% group presentation can be just the PDF
+
+%Each project must as a minimum contain
+% variables
+% a function (main() does not count),
+% a loop, and an 
+% if-else statement 
+%example to rotate an image, but it is fine to use Op
+
+% forward and backward mapping(find out yourself)
+
+%randomizationphase
+
+
+%  My: Topic #6: Convert from RGB to HSI
+% Everything in one PDF file (describe topic(explain what it is, how its performed), then add my own code and description of the code(line by line or part by part))(Whats input and whats output)
+\end{document}

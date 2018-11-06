@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 3 notes and knowledge - IP (2nd part)}
+\author{jdrews17}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\setlength\parindent{0pt}
+\pgfplotsset{width=10cm,compat=1.9} 
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+\begin{itemize}
+  \item .
+\end{itemize}
+
+\section{Lecture}
+\subsection{Pre-face: Introduction}
+
+\subsection{Point processing}
+Very limited in potential (retrospect to kernels \& masks), it can help change brightness. Taking the amount of pixels that are in the picture(optional histogram) and calculating if the image is either too bright or dark.(contrast too)\\
+
+\subsection{Histogram}
+$$p(k) = \frac{n_k}{n}$$\\
+$n_k$ is the total number of pixels with the k'th gray level.\\
+$n$ is the total number of pixels.\\
+$p(k)$ gives the probability of gray value k of appearing in the image.\\
+Bins refer to the individual values given by 0 to 255. Ergo the grayscale value.\\
+Histogram processing, using Piecewise-linear algorithm we can apply a proper histogram stretch to stretch out the constrast on an image that has low constrast. (The L is length(the values from 0 to 255)).\\
+
+\subsection{Histogram stretching}
+Let's find $f_{min}$ and $f_{max}$, each refer to the intensity value.\\
+Modifying the equation $$g(x, y) = a \cdot f(x, y) + b \rightarrow$$ $$g(x, y) = \frac{255}{f_{min} - f_{max}} \cdot (f(x, y)- f_{min})$$
+\subsection{Histogram equalization}
+$$C[j] = \sum_{i=0}^j{H[i]}$$
+$i$ is the bin number, and $H[i]$ is the height of bin $i$.
+
+\subsection{Segmentation}
+Thresholding algorithm;
+$$if \ f(x, y) > T \ then \ g(x, y) = 1, \ else \ g(x, y) = 0$$
+This will segment specifics from a picture.\\
+Software will usually have multiple steps for segmentation, usually an initialization step and a runtime update state. One solution can be Bimodal histogram (two peaks), to seperate background and object.\\
+
+\section{Knowledge}
+\begin{itemize}
+  \item \textbf{What does Point Processing mean?}\\
+    \textit{Processing only one pixel with the values of that pixel or no values at all.}
+  \item \textbf{Describe Brightness and Contrast}\\
+    \textit{Difference, programming-wise is; adding a numbver to a point would increase the brightness, where multiplying a number to a point would increase the contrast.}
+  \item \textbf{Describe greylevel mapping and how it relates to Brightness and Contrast}\\
+    \textit{$$ g(x, y) = f(x, y) + b$$This is the general understanding of greylevel mapping the brightness $$g(x, y) = a \cdot f(x, y) + b$$This is the generalunderstanding of greylevel mapping with both contrast and brightness.\\Basically Point processing on a greyscale image. Mapping refers to the greylevels I/O.} 
+   \item What is a histogram?\\
+     \textit{A plot of how much of a value occours throughout a specific scenario.}
+   \item How can a histogram be used to choose the greylevel mapping?\\
+     \textit{By utilizing a histogram of the intesity/brightness of an imag, we can average out a picture and get a proper visible image from a potential previous too dark or bright of an image}
+   \item What is histogram stretching?\\
+     \textit{By "stretching" the histogram, we can achieve better lighting-conditions in an image.}
+   \item What is thresholding and how is it related to a histogram and to segmentation?\\
+     \textit{By thresholding, we can filter out specific colors or scales we want to ROI. Utilizing histogram stretching we can better find a proper lighting-environment than if controlled by external lights.}
+   \item What is the difference between Achromatic and Chromatic?\\
+     \textit{Achromatic is intensity of the light.\\Chromatic is light waves and the visual range.}
+   \item What is the difference between Subtractive Color and Additive Color?\\
+     \textit{Additive color gives a white color value when the rest are added up.\\Subtractive gives a black color value (Like the sun).}
+   \item Describe the three different color spaces (RGB, rgI, HSI)\\
+     \textit{RGB; Red Green blue, values goes from 0 to 255.\\HSI; Hue saturation and intensity.}
+   \item What are their characteristics and where are they used?
+\end{itemize}
+
+\section{Important notes}
+The greylevel mapping does not neccessarily need the specified formula to adjust contrast and brightness, it could potentiall be replaced by something else, such as an exponential formula or logarithmic. E.g.$$y = log_b(x) \ where \ a = g(x, y) = f(x, y)$$ or $$y = a^x \ where \ a = g(x, y) = f(x, y)$$
+In regards to the Micro-project:\\
+History (how it werks), How people used to do it, how they do it now.\\
+%\begin{centering}
+%\begin{tikzpicture}
+%\begin{axis}[
+%    title=Exponential scaling,
+%    hide axis,
+%    colormap/cool,
+%]
+%\addplot3[
+%    mesh,
+%    samples=50,
+%    domain=-2:2,
+%]
+%  {pow(2, x)+pow(2, y)};
+%\addlegendentry{$2^x + 2^y$}
+%\end{axis}
+%\end{tikzpicture}
+%\end{centering}
+
+
+\end{document}
+

@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 2 notes and knowledge - IP}
+\author{jdrews17}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+\begin{itemize}
+  \item .
+\end{itemize}
+
+\section{Lecture}
+\subsection{Pre-face: Introduction}
+
+\subsection{Color definition.}
+Bayer pattern, is used on sensors to get RGB channels correctly, these are scattered equally in a grid.
+The mean intensity can be found by: $$I = \frac{(R+G+B)}{3} $$
+Converting a proper grayscale can be done by: $$ I = W_R \cdot R + W_G \cdot G + W_B \cdot B \ where \ sum(W_X) = 1$$
+Chromaticity plane, triangulating from a cube we can find the plane by having $R = 1,\ G = 1,\ B = 1$. It represents the true color, here we don't talk about intesity but color only.\\
+\section{Knowledge}
+\begin{itemize}
+  \item What does Point Processing mean?
+   \item Describe Brightness and Contrast
+   \item Describe greylevel mapping and how it relates to Brightness and Contrast
+   \item What is a histogram?\\
+     \textit{A plot of how much of a value occours throughout a specific scenario.}
+   \item How can a histogram be used to choose the greylevel mapping?\\
+     \textit{By utilizing a histogram of the intesity/brightness of an imag, we can average out a picture and get a proper visible image from a potential previous too dark or bright of an image}
+   \item What is histogram stretching?\\
+     \textit{By "stretching" the histogram, we can achieve better lighting-conditions in an image.}
+   \item What is thresholding and how is it related to a histogram and to segmentation?\\
+     \textit{By thresholding, we can filter out specific colors or scales we want to ROI. Utilizing histogram stretching we can better find a proper lighting-environment than if controlled by external lights.}
+   \item What is the difference between Achromatic and Chromatic?\\
+     \textit{Achromatic is intensity of the light.\\Chromatic is light waves and the visual range.}
+   \item What is the difference between Subtractive Color and Additive Color?\\
+     \textit{Additive color gives a white color value when the rest are added up.\\Subtractive gives a black color value (Like the sun).}
+   \item Describe the three different color spaces (RGB, rgI, HSI)\\
+     \textit{RGB; Red Green blue, values goes from 0 to 255.\\HSI; Hue saturation and intensity.}
+   \item What are their characteristics and where are they used?
+\end{itemize}
+
+\section{Important notes}
+
+
+
+\end{document}
+

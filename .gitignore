@@ -1,0 +1,9 @@
+*.swp
+HSP/Handins/
+IP/Handins/
+IP/Playground/
+PCSS/Handins/
+PCSS/Playground/
+MED3/
+!*/*/*.java
+!*/*/*.py

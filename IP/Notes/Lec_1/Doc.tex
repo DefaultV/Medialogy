@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 1 notes and knowledge - IP}
+\author{jdrews17}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+\begin{itemize}
+  \item Read: Chapter 1, 2, 10(browse)
+\end{itemize}
+
+\section{Lecture}
+\subsection{Pre-face: Introduction}
+Deep learning \& AI\\
+
+\subsection{Image processing}
+Rotation, scaling, blurring \& remove part of image.\\
+Combine graphics with real images.\\
+Combine part of one image with another.\\
+How to find and follow objects in an image.\medskip \\
+Basic image processing: ImageJ.\\
+Prerequisite for exam:\\
+\begin{itemize}
+  \item Exercises solving
+  \item Participating in explaining the solved exercises to the rest of the class
+  \item Micro and Mini-projects, including their presentations
+\end{itemize}
+Sensors create electric charge when exposed to light, later converted it to a digital image\\
+Motion blur can be a result of the speed of the shutter. The speed of the shutter can also lead to over or under-exposure.\\
+Digital images are seen as a discrete function(x,y) $f(x,y)$, whereas an image seen as a continuous funtion would be an analog one(film).\\
+ROI(Region of Interest) vs background. The ROI can be found with object tracking or any tracking.
+
+\subsection{Camera}
+Optical system(lens) acts as a barrier, allowing only specific rays to reach the sensor(s). It also focuses bundles of rays into single points. Focal point(F) and Focal length(f), Optical center(O), both F and O span the optical axis.\\
+Distance from object to lens(g), Distance from lens to where the rays intersect(b).\\
+$$\frac{1}{g}+\frac{1}{b} = \frac{1}{f}$$
+$$\frac{b}{B} = \frac{g}{G}$$
+Aperture can close on a lens, making the rays of light come in at a steeper angle, giving more focus but could potentially increase blur. (Glasses sometimes help the aperture in the eye, if a user is straining their eyes focusing)\\
+F.O.V (v), depends on sensor and focal length, the smaller the focal length, the larger the F.O.V.
+\subsubsection{Zoom}
+Optical zoom, algorithms and focal length + aperture = distance from camera.
+
+\subsubsection{Light}
+Having correct lighting conditions can be crucial to computer vision related topics.
+
+
+\section{Knowledge}
+\begin{itemize}
+  \item How is an image formed?\\
+    Sensors and electric charge reflected onto a 2d-array
+
+  \item How is a pixel represented?\\
+    bits and bytes, with different channels.(256 values, greyscale)
+
+  \item Pros and cons of back-lighting?\\
+    Makes the object stand out, since the light stems from behind an object, making the object a black silhouette. Con is light-dependent? Pros, very clear object tracking i guess.
+
+  \item Explain the following terms:
+    \begin{enumerate}
+      \item Focus
+      \item Depth-of-field
+      \item Zoom
+      \item F.O.V
+      \item Focal length
+      \item Shutter
+      \item Aperture
+    \end{enumerate}
+\end{itemize}
+
+\section{Important notes}
+\subsection{Micro-project}
+check slide
+
+\end{document}
+

@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 5 - IP notes}
+\author{Jannick Drews}
+\date{\today}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+Preparation: read chapter 7 - Introduction book\\
+\begin{itemize}
+  \item \textbf{.}\\
+    \textit{.}
+\end{itemize}
+
+\section{Lecture}
+\subsection{BLOB analysis}
+
+\subsection{Region growing}
+Thresholding + Component analysis.\\
+Specifying a seed-point and then grow the region to threshold and do some component analysis. 
+
+\subsection{Shapes}
+\begin{itemize}
+  \item Compactness\\
+    $\frac{Area}{Width \cdot Height}$
+  \item Circularity\\
+    $\frac{Perimeter}{2\sqrt(\pi \cdot Area)}$
+  \item Feret's diameter (Longest distance)\\
+  \item Orientation of Feret's diameter\\
+\end{itemize}
+
+\subsection{Classification}
+Trusting specific features more, e.g. weighting them more in an image for classification, we can modify the euclidean distance formula:
+$$ D = \sqrt(W_1(x_1 - x_2)^2 + W_2(y_1 - y_2)) $$
+This is a very useful option for machie-learning applications. Using classifications, such as shape, center and features thelike, is much more efficent for detecing e.g. humans, since skin-hair etc color is non-vital for this sort of implementation.\\
+Using ratios for feature matching is much better, e.g. $\frac{w}{h}$ instead of w and h seperately. This also goes for normalization (ratio between features).
+Normalization: $$x' = \frac{x-x_{min}}{x_{max}-x_{min}}$$
+
+\section{Machine-learning - k Nearest Neighbour}
+The nearest neighbour in the form of a 2d graph, given the different positions of classes with features f1 and f2, a specific class will be defined as a class of the same type as the closest neighbour. K stands for how many neighbours are taken into consideration (consideration will be a value of how many neighbours to compare to, e.g. (two triangles and a circle are neighbours))
+Probability of a class is given by: $$ p(C_j|x) = \frac{k_j}{K} $$
+So, 2 circles and a triangle neighbour, where $ C_j \epsilon (Circle, Triangle), K=3$\\
+$p(Circle|x) = \frac{2}{3}$
+$p(Triangle|x) = \frac{1}{3}$
+
+\section{Knowledge}
+\begin{itemize}
+  \item .\\
+    \textit{.}
+\end{itemize}
+
+\section{Important notes}
+\section{Exercise}
+%Slide 13, 14, 18, 32, 33, 43, 47, 48, 49, 50
+
+\end{document}

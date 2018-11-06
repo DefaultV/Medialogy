@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lecture 6 notes and knowledge}
+\author{jdrews17}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture}
+Preparation: Read chapter 7\\
+\begin{itemize}
+  \item \textbf{How would a simple neural circuit function that would respond to motion?}\\
+    \textit{A simple neural circuit could be; having two receptive fields, RF1 RF2, introducing a delay, for RF1 would give an above BFR reponse of both neurons, giving the circuit the reponse of the moving object.}
+  \item \textbf{How can the motion aftereffect be explained?}\\
+    \textit{Example from the book; By staring at a waterfall for a certain amount of time and then looking at a static wall afterwards can result in the perception that the wall is moving \textbf{slowly upwards.} A possible explanation is the opposing theory just like color contrast, whereas here it's the motion circuits responding. "Motion contrast". \textbf{Sofia:} After the local-motion detector circuit has adapted, the downward information is comparably weaker, and when then looking at a static object, there's going to be upward movement whereas the downward information is stil BFR. Giving the sence of motion contrast.}
+  \item \textbf{What is motion coherence?}\\
+    \textit{Multiple objects in a scene appear to move in the same direction, (Book mentions a test with a monkey, showing 95\% of the monkeys judgement on the direction of the moving objects on a 12.8\% motion coherence.)}
+  \item \textbf{What is the aperture problem and what is needed to solve it?}\\
+    \textit{Example from the book; Looking at an edge of a rectangle, only seeing the middle part of the right side, you would not be able to perceive whether or not the rectangle is moving north-east or just east. A solution to this is; combining multiple pieces of information from the different V1 neurons, (the MT helps with this), the MT neurons can combine the information from multiple V1 neurons to indicate the objects vector by the different patters of responses in the V1 neurons.}
+  \item \textbf{What is the random dot kinematogram?}\\
+    \textit{A region of random white and black squares, this is in relation to pyschophysical evidence that motion discontinues alone. If you make a figure out of an area on the kinematogram, you can see where that region has moved to on a related kinematogram. \textbf{Sofia:} detecting motion through this could be helpful in situations of detecting camouflage or food.}
+  \item \textbf{What is meant by biological motion and what can it inform us about?}\\
+    \textit{Deducing considerable information about movement from sparse visual information; We can recognize different creatures or objects by this sparse information, such as connected joints, there more information we get through e.g. a point-light experiment, the more we can recognize what kind of object is in question.}
+  \item \textbf{What are different kinds of eye movements used for?}\\
+    \textit{\begin{itemize}
+      \item Saccadic eye movements\\
+        Brief rapid movements that change focus of gaze from one location to another in a scene.
+      \item Smooth pursuit eye movements\\
+        This is when you track an object that is moving continuously
+      \end{itemize}}
+  \item \textbf{How can your visual system detect whether you or something else is in motion?}\\
+    \textit{Real-motion cells, these cells respond strongly to only when single objects are moving in a scene}
+\end{itemize}
+
+\section{Lecture}
+\subsection{Problems the visual system needs to solve to detect object motion}
+\textbf{How to build a motion detector?}\\
+Use the V1 neurons and build an MT circuit, just as how the human would perceive it.\\
+In a computer-vision area, you would to continouous background segmentation.\\
+\subsection{Use of motion information}
+Segmentation of Figure-Ground\\
+- Figure: object that draws our attention\\
+- Ground: non-moving dots/contours/blobs\\
+- Using Gestalt law of Common Fate\\
+- items that move together belong together\\
+
+Use motion to recover some 3D information\\
+- different information from different views\\
+- combine into a single 3D model\\
+- kinetic depth\\
+\section{Knowledge}
+\begin{itemize}
+  \item Discuss some of the problems the visual system needs to solve in order to detect motion.\\
+    \textit{Depth perception in our eyes?. Delay}
+  \item Give examples of information on actions and features that can be perceived from motion only.\\
+    \textit{Animacy?, causality?, biological motion?}
+  \item Describe the concept of apparent motion and give examples of when we perceive it.\\
+    \textit{Distance and time-interval can matter in regards to apparent motion. Our motion detector will be triggered if receptive fields A and B are strimulated within a certain time period. Rather than accept that a stimulus just disappears and another one just like it appears at another pos, we tend to assume that the stimulus moved}
+\end{itemize}
+
+\section{Important notes}
+
+
+\end{document}
