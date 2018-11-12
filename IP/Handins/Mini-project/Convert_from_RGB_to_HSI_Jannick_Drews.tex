@@ -78,6 +78,13 @@ This assignment will convert the RGB color-space to the HSI color-space, this is
     \caption{Formulas for converting RGB to HSI\goodcite{IP}}
     \label{fig:formulas}
 \end{figure}
+For converting the degrees to radians and vice versa;
+\begin{figure}[H]
+    \centering
+    $$ D_{deg} = R_{rad} \cdot \frac{180}{\pi},\ R_{rad} = (\frac{D_{deg}}{180}) \cdot \pi $$
+    \caption{Radians $\rightarrow$ Degrees and Degrees $\rightarrow$ Radians}
+    \label{fig:convert}
+\end{figure}
 And the description of the assignment is the following:\\
 \textit{"Make a Python program that can convert from RGB to HSI.\\Input: An RGB image\\Output: Three images: a H-image, a S-image, and an I-image"}
 % How its performed ??
@@ -96,6 +103,9 @@ Inside a double for-loop, to go through each pixel in the image, we grab the res
 The different variables are assigned to the respective parts of the formula from \autoref{fig:formulas}, and makes sure to catch the exception where $R = G = B$. And lastly the \texttt{formula} variable calculates the remaining part of the formula. The \texttt{top} variable calculates the top part of the formula, and the \texttt{bot} calculates the bottom part.\\
 We then check if the statement from the formula is true, that if $ G \ge B$ then we subtract 360 degrees, and remember to convert it first to $2\cdot\pi$ for the radians.\\
 And the last instruction converts the radian back to degrees.\medskip \\
+%%%%%%%%%%%%%%%%%%%%
+% REFERENCE THE CONVERSION ??%
+%%%%%%%%%%%%%%%%%%%%
 \underline{Lines; 43 to 54}
 From here we calculate the Saturation and the Intensity channels, still following the formula described at \autoref{fig:formulas}.
 First the saturation, which is dividing the minimum value of the respective red green or blue channel, this formula is also split it for ease of reading.\\
@@ -130,7 +140,7 @@ The next figures will illistrate calculations from Wolfra Alpha, which is a huge
     \caption{Result from implementation}
   \label{fig:217_code}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth} 
+\begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=0.9\linewidth]{img/rgb-217-142-146-wolfram.png}
     \caption{Result from Wolfram alpha\goodcite{Wolfram}}
@@ -148,7 +158,7 @@ The next figures will illistrate calculations from Wolfra Alpha, which is a huge
     \caption{Result from implementation}
   \label{fig:188_code}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth} 
+    \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=0.9\linewidth]{img/rgb-188-91-74-wolfram.png}
     \caption{Result from Wolfram alpha\goodcite{Wolfram}}
