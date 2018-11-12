@@ -5,11 +5,11 @@ import cv2, numpy as np, matplotlib.pyplot as plt
 def HSI_Conv(im):
     # Algorithm:
     original = im
-    hsi_h = np.zeros((im.shape[0], im.shape[1]), np.float32)
-    hsi_s = np.zeros((im.shape[0], im.shape[1]), np.float32)
-    hsi_i = np.zeros((im.shape[0], im.shape[1]), np.float32)
-    for x in range(im.shape[0]):
-        for y in range(im.shape[1]):
+    hsi_h = np.zeros((im.shape[1], im.shape[0]), np.float32)
+    hsi_s = np.zeros((im.shape[1], im.shape[0]), np.float32)
+    hsi_i = np.zeros((im.shape[1], im.shape[0]), np.float32)
+    for x in range(im.shape[1]):
+        for y in range(im.shape[0]):
 
             # Get RGB(Remember to use BGR_TO_RGB function further down for correct vals)
             red = int(im[x][y][0])
