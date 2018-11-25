@@ -68,9 +68,9 @@
 \pagenumbering{arabic}
 
 \section{Convert from RGB to HSI}
-The \texttt{RGB} and \texttt{HSI} refers to their respective color-spaces. These are used to display an image in a certain aspect, both color-spaces presented in a digital form will use a 3-dimensional array.\\
-For \texttt{RGB}, the 3-dimensional array would look like the following; $[R, G, B]$, an example could be $[255, 10, 25]$ which is the value 255 for the red channel, 10 for the green channel and 25 for the blue channel. Note that RGB values follow the ruleset\goodcite{IP}; $$ R,G,B \in [0, 255] $$\\
-For the \texttt{HSI} color-space, represented digitaly it would look like; $[H, S, I]$, an example could be $[310, 0.3, 144]$ which is the value 310 for the hue in degrees, 0.3 for the saturation and 144 for the intensity. Note that HSI values follow the ruleset\goodcite{IP}: $$ H \in [0, 360[ $$ $$ S \in [0, 1]$$ $$ I \in [0, 255]$$ Keep in mind that this color-space does have a inconsistent naming convention, it is also known as \texttt{HSB} and \texttt{HSL}, if not more.\medskip \\
+The \texttt{RGB} and \texttt{HSI} refers to their respective color-spaces. These are used to display image values, in certain aspects. Both the color-spaces when presented in a digital form, will use a 3-dimensional array.\\
+For \texttt{RGB}, the 3-dimensional array would look like the following; $[R, G, B]$, an example could be $[255, 10, 25]$ where the value 255 is for the red channel, 10 for the green channel and 25 for the blue channel. Note that RGB values follow the ruleset\goodcite{IP}; $$ R,G,B \in [0, 255] $$\\
+For the \texttt{HSI} color-space, represented digitaly it would look like; $[H, S, I]$, an example could be $[310, 0.3, 144]$ where the first value 310 is for the hue in degrees, 0.3 for the saturation and 144 for the intensity. Note that HSI values follow the ruleset\goodcite{IP}: $$ H \in [0, 360[ $$ $$ S \in [0, 1]$$ $$ I \in [0, 255]$$ Keep in mind that this color-space does have a inconsistent naming convention, it is also known as \texttt{HSB} and \texttt{HSL}, if not more.\medskip \\
 This assignment will convert the RGB color-space to the HSI color-space, this is performed by utilizing the formulas found on \autoref{fig:formulas} \goodcite{IP}
 \begin{figure}[H]
     \centering
@@ -120,7 +120,7 @@ These three lines just load the image and convert it to RGB and put it into the 
 
 % Whats input and whats output
 \subsection{Input/Output}
-The subplot illustrated on \autoref{fig:subplot}, is displayed after the code has executed, where the \textit{"Original"} is the original RGB image, of cause converted to RGB with the conversion function implemented at line \texttt{69}, and the rest of the titles are the Hue, Saturation and Intensity channels respectively.
+The subplot illustrated on \autoref{fig:subplot}, is displayed after the code has executed, where the \textit{"Original"} is the original RGB image. The original image is although converted to RGB with the conversion function implemented at line \texttt{69} because OpenCV loads images as BGR. The rest of the titles are the Hue, Saturation and Intensity channels respectively.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/output.png}
