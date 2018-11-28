@@ -50,23 +50,25 @@
 
 \section{Introduction}
 \label{sec:Introduction}
-This essay will cover aspects of human perception, that relate and are similar to my media-technological semester project. This will include the topics; Recognizing visual objects, object recognition and colour vision. The semester project revolves around detecting hand postures through colour segmentation, in an image and/or video.
+This essay will cover aspects of human perception, that relate and are similar to media-technological techniques, which are applied in my semester project. This will include the topics; Recognizing visual objects, object recognition and colour vision. My semester project revolves around detecting hand postures through colour segmentation, in an image and/or video.
 \section{Theory and comparisons}
 \label{sec:Theory}
-This section will present perception theories and compare them to their likely candidates of the media-technological counterparts. It will be a iterative discussion of a perception theory first and then the counterpart, iteratively.
+This section will present perception theories and compare them to their likely candidates of the media-technological counterparts. It is a iterative discussion of a perception theory first and then then the counterpart.
 
 \subsection{Colour vision} % w
-To understand how we perceive colour, an understanding of how light and the human eye functions is required. This section will compare the perceptional aspect of seeing light, to how a camera captures an image and its digital sensors.
+To understand how we perceive colour, an understanding of how light and the human eye functions is required. This section will compare the perceptional aspect of seeing light, to how a camera captures a scene and turns the information into an image.
 
 \subsubsection{Light}
-To understand how we perceive colour and how a media-technological system retrieves it, we must first cover the explanation of light. Light is electromagnetic energy, a stream of photons, with tiny particles which each consists of one quantum of energy, which behaves like a wave\goodcite{hsp}. The property; \textit{wavelength}, defines what colour would be perceived by the visual system. An electromagnetic waves wavelength between 370nm to 730nm is typically what humans are able to perceive on the electromagnetic spectrum\goodcite{hsp}, this is displayed on \autoref{fig:EMSpectrum} denoted by the \textit{visible} area of the electromagnetic spectrum.
+To understand how we perceive colour and how a media-technological system retrieves it, we must first cover the explanation of light.\medskip\\
+
+Light is electromagnetic energy, a stream of photons, with tiny particles which each consists of one quantum of energy, which behaves like a wave\goodcite{hsp}. The property; \textit{wavelength}, defines what colour would be perceived by the visual system. An electromagnetic waves wavelength between 370nm to 730nm is typically what the visual system is able to perceive on the electromagnetic spectrum\goodcite{hsp}, this is displayed on \autoref{fig:EMSpectrum} denoted by the \textit{visible} area of the electromagnetic spectrum.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{img/EMSpectrum.jpg}
   \caption{The electromagnetic spectrum\goodcite{hsp}}
   \label{fig:EMSpectrum}
 \end{figure}
-Even though this explanation is adequate for the physical aspect, there's still different theories on how exactly we will perceive the colours in the spectrum.% But it is still evident that the cones in an eye is sensitive to respective wavelengths.\\
+Even though this explanation is adequate for the physical aspect, there's still different theories on how exactly we will perceive the colours in the spectrum. But for this comparison we will only be covering the photoreceptors and how they function.% But it is still evident that the cones in an eye is sensitive to respective wavelengths.\\
 
 %\subsubsection{Trichromatic \& Opponent-process theory} %
 %\label{sec:colour-trichro-n-dichro}
@@ -75,7 +77,7 @@ Even though this explanation is adequate for the physical aspect, there's still 
 %The opponent-process theory, explains how we typically perceive colours to be off of 4 basic colours; these being: Yellow, Green, Red, Blue\goodcite{hsp}. The reason for this is brain circuits interpreting the receptive signals, and example is the adaptation.
 
 \subsubsection{The human eye \& Photoreceptors}
-Simply, light enters the eye through the Cornea, which then further travels through the Lens past the Iris, through the Vitreous chamber and finally arrives at the Fovea, where the light or image is mostly focused\goodcite{hsp}. The Lens and Cornea helps to focus the image and the Iris helps to determine how much light should be let in through the rest of the eye. To focus the image, the Lens help to refract the light, to make sure the light is properly focused, when it reaches the retina\goodcite{hsp}.\medskip \\
+Simply, light enters the eye through the Cornea, which then further travels through the Lens past the Iris, through the Vitreous chamber and finally arrives at the Fovea, where the light is focused to form an image of the currently viewed scene.\goodcite{hsp}.\\The Lens and Cornea helps to focus the image and the Iris helps to determine how much light should be let in through the rest of the eye. To focus the image, the Lens functions to refract the incoming light, to make sure the light is properly focused when it reaches the retina\goodcite{hsp}.\medskip \\
 
 \begin{figure}[H]
     \centering
@@ -84,13 +86,13 @@ Simply, light enters the eye through the Cornea, which then further travels thro
     \label{fig:focus_light}
 \end{figure}
 
-Adjusting the shape of a lens, the focal point can be altered and thereby determining the position of where the lightrays should focus. The Lens in the eye will be stretched by muscles in the eye, to focus on objects that are at different distances, see \autoref{fig:focus_light}. This specific adjustment in the lens and eye is called \texttt{accomodation}\goodcite{hsp}.
+Adjusting the shape of a lens, the focal point can be altered and thereby determining the position of where the lightrays should focus. The Lens in the eye will be stretched by muscles, to focus on objects that are at different distances in a scene, see \autoref{fig:focus_light}. This specific adjustment in the lens and eye is called \texttt{accomodation}\goodcite{hsp}.\medskip\\
 
 %\subsubsection{Photoreceptors}
-The photoreceptors in the eyes retina consists of rods and cones, which are two types of neurons which transduce light into neural signals. The cones carry the information of the difference in wavelength. The cones are also sensitive to different wavelengths, namely short, medium and long wavelengths, whereas the rods do not carry much information in regards to wavelength but are much more sensitive to the intensity of light\goodcite{hsp}.\\After the light has been converted into neural signals, they get propagated to multiple other cells and finally to the retinal ganglion cells, which axons bundle together and send action potentials(AP) to the brain\goodcite{hsp}.\\
+The photoreceptors in the eyes retina consists of rods and cones, which are two types of neurons which transduce light into neural signals. The cones carry the information of the difference in wavelength. The cones are also sensitive to different wavelengths, namely short, medium and long wavelengths, whereas the rods do not carry much information in regards to wavelength, but are much more sensitive to the intensity of light\goodcite{hsp}.\\After the light has been converted into neural signals, they get propagated through multiple other cells and finally to the retinal ganglion cells, which axons bundle together and send action potentials(AP) to the brain, thereby enabling the brain to perceive colour.\goodcite{hsp}.\\
 
 \subsubsection{Cameras \& Digital sensors}
-Similar to an eye, the lens of a camera aim to duplicate the functionalities for getting a sharp and clear image\goodcite{IP}. More specifically, an important factor in optical systems is the lens, which serves to focus incoming light, typically onto a set of sensors\goodcite{IP}. Another aspect is also how the aperture in a camera, resembles the iris functionalities, controlling how much light should be allowed to pass through. A camera with a low shutter speed of the aperture can potentially result in blurry images if too much movement is in the scene while the image is captured\goodcite{IP}. This is although not the case with the human eyes iris, as it just serves to not overwhelm the rods and cones with light\goodcite{hsp}.
+Similar to the lens in an eye, the lens of a camera aim to duplicate the functionalities for getting a sharp and clear image\goodcite{IP}. More specifically, the lens is an important factor in optical systems, which serves to focus incoming light, typically onto a set of sensors\goodcite{IP}. Another aspect is also how the aperture in a camera, resembles the iris functionalities, controlling how much light should be allowed to pass through. A camera with a low shutter speed of the aperture can potentially result in blurry images if too much movement is in the scene while the image is captured\goodcite{IP}. This is although not the case with the human eyes iris, as it just serves to not overwhelm the rods and cones with light\goodcite{hsp}.
 
 \begin{figure}[H]
     \centering
@@ -99,7 +101,7 @@ Similar to an eye, the lens of a camera aim to duplicate the functionalities for
     \label{fig:Image_sensor}
 \end{figure}
 
-The digital sensors is a grid of interconnected cells, respectively the red, green and blue have filters for allowing certain energy to enter the cells, this is stored as voltage which will be converted to a digital number through a converter\goodcite{IP}. This method of storing electromagnetic waves as energy, resembles how the rods and cones in the retina store the electromagnetic waves, and more specifically the amount of charge depending on the specific wavelength of the wave\goodcite{hsp}.\\The digital sensor is although suited with a grid-system of red, green and blue wavelength sensitive sensors, which will then convert the retrieved wave energy into digital numbers. This resembles how the retina also constructs an image from the rods and cones, which are sent further to the brain by the propagated information from the cells\goodcite{hsp}.
+A likely candidate for the cones in an eye, and how they function, can be the sensor in a digital camera. The digital sensor is a grid of interconnected cells, respectively the red, green and blue have filters for allowing certain energy to enter the cells, this is stored as voltage which will be converted to a digital number through a converter\goodcite{IP}. This method of storing electromagnetic waves as energy, resembles how the rods and cones in the retina store the electromagnetic waves, and more specifically the amount of charge depending on the specific wavelength of the wave\goodcite{hsp}.\\The digital sensor is although suited with a grid-system of red, green and blue wavelength sensitive sensors, which will then convert the retrieved wave energy into digital numbers. This resembles how the retina also transduce light into colour, by the rods and cones, which are sent further to the brain by the propagated information from the cells\goodcite{hsp}. % TODO: Rephrase
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Next Topic %%%%%%%%%
@@ -108,7 +110,7 @@ The digital sensors is a grid of interconnected cells, respectively the red, gre
 \subsection{Recognizing visual objects}% w * 2
 This section will cover the comparisons of the Gestalt principles of figure ground organization and edge completion, compared to BLOB analysis and thresholding.\medskip\\
 
-Recognizing objects might be a simple task for a human, but it shows to be a lot more than just visually perceiving an object. Multiple elements play a role in proper object recognition, such as Figure-Ground organization, Perceptual grouping, Perceptual interpolation, recognition by components mode, edge detection and the Gestalt principles.\\
+Recognizing objects might be a simple task for a human, but it shows to be a lot more than just visually perceiving an object. Multiple elements play a role in proper object recognition, such as Figure-Ground organization, Perceptual grouping, Perceptual interpolation, recognition by components model, edge detection and the Gestalt principles\goodcite{hsp}.\\
 %\begin{figure}
 %    \centering
 %    \includegraphics[width=0.5\textwidth]{img/ObjectSteps.png}
@@ -119,12 +121,12 @@ The steps for recognizing visual objects is split into two layers, firstly the p
 
 \subsubsection{Figure Ground Organization}
 \label{sec:perceptialorganization}
-Perceptual organization serves to make object recognition in complex scenes possible, it does this by "detecting" edges and regions in a retinal image and performing a certain amount of steps to further candidate objects in the scene, for later recognition\goodcite{hsp}.\\
+Perceptual organization serves to make object recognition in complex scenes possible, it does this by performing a certain amount of steps to candidate objects in the scene, for later recognition\goodcite{hsp}.\\
 Three complications are quite important, when talking about the analysis of object recognition, these three can be pronounced like the following; image clutter, object variety and variable views.\\
-Image clutter refers to the fact that multiple objects in a scene may occlude each other, where the visual system must make up for the occluded parts of objects. The object variety refers to how many different objects there is it generally recognize, this is in terms of shape and form. Even if the object is difficult to specifically identify, a general idea of what the object is can still be found. Variable views, is how an object appearing differently on the retinal images, depending on the orientation and the viewpoint of the object whilst also being of different illumination\goodcite{hsp}.\\
+Image clutter refers to the fact that multiple objects in a scene may occlude each other, where the visual system must make up for the occluded parts of objects. The object variety refers to how many different objects there is it generally recognize, this is in terms of shape and form. Even if the object is difficult to specifically identify, a general idea of what the object is can still be found. Variable views, is how an object can appear differently on the retinal images, depending on the orientation and the viewpoint of the object whilst also being of different illumination\goodcite{hsp}.\\
 
 % THIS CAN BE RELATED TO THE SEMESTER PROJECT IN TERMS OF HAND EDGES AND REGION(BLOB ANALYSIS & EDGE DETECTION(CONVEX HULL))
-The edges and regions are "detected" by patterns of neural activity, responding to location, orientation and curvature of objects in a simple scene. This can be more abstract when reviewing an image of more complex intensity of brightness, and example could be any scene with occlusion, shadows or shading on an object which also refers to the previously used term; image clutter. The question then becomes, how can the brain then resolve the complex or cluttered scenes?\\
+The edges and regions of a figure, are "detected" by patterns of neural activity, responding to location, orientation and curvature of objects in a simple scene, a scene with only contrast in intensity. This process is performed by the visual system and is called \textit{edge extraction}. This can be more abstract when reviewing an image of more complex intensity of brightness, and example could be any scene with occlusion, shadows or shading on an object which also refers to the previously used term; image clutter. The question then becomes, how can the brain then resolve the complex or cluttered scenes?\\
 % blabla image processing
 
 % MORE ABOUT HSP
@@ -137,12 +139,11 @@ This question can be answered by covering multiple topics which makes up good ca
     \label{fig:border_ownership}
 \end{figure}
 
-\autoref{fig:border_ownership} illustrates the grouping technique of border ownsership and figure-ground organization, on the left figure (a) it's easier to determine the borders and therefore easier to determine the occluded letters B. Whereas on the right figure (b), it's harder since the visual system gives all the fragment borders ownership (Which makes them seem like individual figures)\goodcite{hsp}.\medskip \\
-Another example is edge completion, which sets up illusory contours which perceptually fill in missing edges to complete figures. An example would be three circles which all have a small triangle shape cut out of them all, but the circles are aligned to certain angles to give off the illusion that there is a triangle to be perceived between the circles.\\
+\autoref{fig:border_ownership} illustrates the grouping technique of border ownsership and figure-ground organization, on the left figure (a) it's easier to determine the borders and therefore easier to determine the occluded letters B. Whereas on the right figure (b), it's harder since the visual system gives all the fragment borders ownership (Which makes them seem like individual figures)\goodcite{hsp}.\medskip \\Another example is edge completion, which sets up illusory contours which perceptually fill in missing edges to complete figures. An example would be three circles which all have a small triangle shape cut out of them all, but the circles are aligned to certain angles to give off the illusion that there is a triangle to be perceived in the missing space, between the circles.\\
 \subsubsection{BLOB Analysis}
-A likely media-technological relative to the figure-ground organization could be BLOB(Binary Large OBject) analysis, which is a technique in Image Processing. BLOB analysis is the extraction, feature and classification of a BLOB, in an image\goodcite{IP}. The BLOB will then be classified as an arbitrary object in the image\goodcite{IP}.\\It does this by going pixel by pixel of an image, and then marking the pixels as objects, the determination of which pixels belong to what object is determined by the kernel used\goodcite{IP}.\medskip \\
+A likely media-technological relative to the figure-ground organization could be BLOB(Binary Large OBject) analysis, which is a technique in Image Processing. BLOB analysis is the extraction, feature and classification of a BLOB, in an image\goodcite{IP}. The BLOB will then be classified as an arbitrary object in the image\goodcite{IP}.\\It does this by going pixel by pixel of an image, and then classifying the different pixels according to their neighbours, the determination of which pixels belong to what classified object is determined by the kernel used\goodcite{IP}.\medskip \\
 
-Referring to the \autoref{fig:border_ownership} again, the BLOB analysis would to a certain extent, also arrive at the same result as the average human would perceive. Since the right figure (b), where the fragments have no interconnection, the BLOB analysis would regard all the fragments as individual BLOBs, whereas the right figure (a) would be determined as one whole (keeping in mind that the ink would have to be the same colour as the occluded letters). BLOB classification would also potentially classify the ink as one object, the fragments as multiple single objects, whereas the Gestalt psychology suggest that edge completion supports that the perceived letters behind the ink are of whole objects, in this case the whole letter B.\medskip\\
+Referring to the \autoref{fig:border_ownership} again, the BLOB analysis would to a certain extent, also arrive at the same result as the average human would perceive. Since the right figure (b), where the fragments have no interconnection, the BLOB analysis would regard all the fragments as individual BLOBs, whereas the right figure (a) would be determined as one whole (keeping in mind that the ink would have to be the same colour as the occluded letters). BLOB classification would also potentially classify the ink as one object, the fragments as multiple single objects, whereas the Gestalt psychology suggest that edge completion supports that the perceived letters behind the ink are perceived as whole objects, in this case the whole letter B.\medskip\\
 
 Another candidate for a media-technological relative to the figure-ground organization, more specifically detecting edges from intensity of colour and/or brightness, could be Thresholding. Thresholding is the process of mapping a certain range of pixels with a specific pixel-value to either 0 or 255, or 0 and 1\goodcite{IP}. Thresholding takes a specific thresholding value, which it then compares to all the pixels of an image. If the pixel-value is lower than the threshold value then it assigns the pixel-value to 0 whilst the reverse operation is applied to pixel-values above the threshold value\goodcite{IP}.\\This will help segment figures that are of different colour and/or brightness from the rest of the image clutter.\medskip \\
 
@@ -157,7 +158,7 @@ This section will compare the resemblance of object recognition, against a likel
 \subsubsection{Object recognition}
 After the creation of candidate objects by the perceptual organization steps, the visual system now has to recognize the objects. This is done by matching the objects, to stored memory in the brain.\\
 
-\begin{center}
+\begin{center} % TODO: really needed?
 \textit{"Core object recognition is the ability to rapidly discriminate a given visual object from all other possible visual objects without any object-specific or location-specific pre-cuing"}\goodcite{solveVisual}\\
 \end{center}
 
@@ -172,8 +173,36 @@ It makes sense to claim that the visual system must somehow be able to compare o
 
 Another approach to invariance, is that it is based on a view-specific manner, in which multiple representations of a single object would be stored. Multiple different views of a single object will be stored, and when the current view will give off a specific view of an object, all the stored views will be compared simultaneously.\medskip \\ % TODO ?
 
-\subsubsection{Feature - \& Template matching}
-Computer-vision specific technologies that exhibit part wise the same traits as the view-specific manner of approaching invariance, is the feature matching. Template matching does however give a rough estimate of how much a candidate object matches the stored representation, although keeping in mind that viewpoint and similarity is a huge factor, in this type of matching.\\Feature matching takes certain features of an object and matches it against objects in a scene and retrieves the most likely match based on distance calculations\goodcite{OpenCV}.\medskip \\Keeping in mind that we still have insufficient knowledge on how exactly object recognition occurs, but by utilising and constructing artificial systems, based on our visual system and the theories of how we perceive the world, a can potential explanation of how it functions could be presented.\\
+\subsubsection{Feature matching}
+Computer-vision specific techniques that exhibit part wise the same traits as the view-specific manner of approaching invariance, is the feature matching.\\Feature matching takes certain features of an object and matches it against objects in a scene and retrieves the most likely match based on distance calculations\goodcite{OpenCV}, see \autoref{fig:feature_matching} for an illustration of how feature matching functions with a scene and a template image.\medskip \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/featurematch.png}
+    \caption{Feature matching in OpenCV\goodcite{OpenCV}}
+    \label{fig:feature_matching}
+\end{figure}
+
+%The task of ﬁnding correspondences between two images of the same scene or
+%object is part of many computer vision applications. Camera calibration, 3D
+%reconstruction, image registration, and object recognition are just a few. The
+%search for discrete image correspondences – the goal of this work – can be di-
+%vided into three main steps. First, ‘interest points’ are selected at distinctive
+%locations in the image, such as corners, blobs, and T-junctions. The most valu-
+%able property of an interest point detector is its repeatability, i.e. whether it
+%reliably ﬁnds the same interest points under different viewing conditions. Next,
+%the neighbourhood of every interest point is represented by a feature vector. This
+%descriptor has to be distinctive and, at the same time, robust to noise, detec-
+%tion errors, and geometric and photometric deformations. Finally, the descriptor
+%vectors are matched between diﬀerent images. The matching is often based on a
+%distance between the vectors, e.g. the Mahalanobis or Euclidean distance. The
+%dimension of the descriptor has a direct impact on the time this takes, and a
+%lower number of dimensions is therefore desirable.
+%It has been our goal to develop both a detector
+
+% TODO: Better describe feature matching
+
+Keeping in mind that we still have insufficient knowledge on how exactly object recognition occurs, but by utilising and constructing artificial systems, based on our visual system and the theories of how we perceive the world, a can potential explanation of how it functions could be presented.\\
 This can be correlated to how our perceptual system work and thereby understanding how it exactly functions in the artificial system, A synergy is created between research fields which look at how that system functions and how the perceptual system functions\goodcite{solveVisual}.\\As stated in a paper from the department of Brain and Cognitive Sciences and McGovern Institute for Brain Research;
 \begin{center}
     \textit{"We expect this pace to accelerate, to fully explain human abilities, to reveal ways for extending and generalizing beyond those abilities, and to expose ways to repair broken neuronal circuits and augment normal circuits."}\goodcite{solveVisual}
