@@ -19,8 +19,8 @@
 \addbibresource{Ref.bib}
 
 \title{Human Senses and Perception - Mini-Project}
-\author{Jannick Drews}
-\date{2018}
+\author{Jannick Fritz Drews}
+\date{\today}
 
 \begin{document}
 
@@ -139,11 +139,11 @@ This question can be answered by covering multiple topics which makes up good ca
     \label{fig:border_ownership}
 \end{figure}
 
-\autoref{fig:border_ownership} illustrates the grouping technique of border ownsership and figure-ground organization, on the left figure (a) it's easier to determine the borders and therefore easier to determine the occluded letters B. Whereas on the right figure (b), it's harder since the visual system gives all the fragment borders ownership (Which makes them seem like individual figures)\goodcite{hsp}.\medskip \\Another example is edge completion, which sets up illusory contours which perceptually fill in missing edges to complete figures. An example would be three circles which all have a small triangle shape cut out of them all, but the circles are aligned to certain angles to give off the illusion that there is a triangle to be perceived in the missing space, between the circles.\\
+\autoref{fig:border_ownership} illustrates the grouping technique of border ownership and figure-ground organization, on the left figure (a) it's easier to determine the borders and therefore easier to determine the occluded letters B. Whereas on the right figure (b), it's harder since the visual system gives all the fragment borders ownership (Which makes them seem like individual figures)\goodcite{hsp}.\medskip \\Another example is edge completion, which sets up illusory contours which perceptually fill in missing edges to complete figures. An example would be three circles which all have a small triangle shape cut out of them all, but the circles are aligned to certain angles to give off the illusion that there is a triangle to be perceived in the missing space, between the circles.\\
 \subsubsection{BLOB Analysis}
-A likely media-technological relative to the figure-ground organization could be BLOB(Binary Large OBject) analysis, which is a technique in Image Processing. BLOB analysis is the extraction, feature and classification of a BLOB, in an image\goodcite{IP}. The BLOB will then be classified as an arbitrary object in the image\goodcite{IP}.\\It does this by going pixel by pixel of an image, and then classifying the different pixels according to their neighbours, the determination of which pixels belong to what classified object is determined by the kernel used\goodcite{IP}.\medskip \\
+A likely media-technological relative to the figure-ground organization could be BLOB(Binary Large OBject) analysis, which is a technique in Image Processing. BLOB analysis is the extraction, feature and classification of a BLOB, in an image\goodcite{IP}. The BLOB will then be classified as an arbitrary object in the image\goodcite{IP}.\\It does this by going pixel by pixel of an image, and then classifying the different pixels according to their neighbours, the determination of which pixels belong to what classified object is determined by the kernel used in the process.\goodcite{IP}.\medskip \\
 
-Referring to the \autoref{fig:border_ownership} again, the BLOB analysis would to a certain extent, also arrive at the same result as the average human would perceive. Since the right figure (b), where the fragments have no interconnection, the BLOB analysis would regard all the fragments as individual BLOBs, whereas the right figure (a) would be determined as one whole (keeping in mind that the ink would have to be the same colour as the occluded letters). BLOB classification would also potentially classify the ink as one object, the fragments as multiple single objects, whereas the Gestalt psychology suggest that edge completion supports that the perceived letters behind the ink are perceived as whole objects, in this case the whole letter B.\medskip\\
+Referring to the \autoref{fig:border_ownership} again, the BLOB analysis would to a certain extent, also arrive at the same result as the average human would perceive. Since the right figure (b), where the fragments have no interconnection, the BLOB analysis would regard all the fragments as individual BLOBs, whereas the right figure (a) would be determined as one whole (keeping in mind that the ink would have to be the same colour as the occluded letters). BLOB classification would also potentially classify the ink as one object, the fragments as multiple single objects, whereas the Gestalt psychology suggest that edge completion supports that the perceived letters behind the ink are perceived as whole objects, in this case the whole letter B. Keep in mind that this only applies to very simple scenes, whereas if BLOB analysis was used directly on a complex or cluttered scene, it would definitely fail. Therefore a big difference is that BLOB analysis does require multiple other libraries or algorithms to do its job properly.\medskip\\
 
 Another candidate for a media-technological relative to the figure-ground organization, more specifically detecting edges from intensity of colour and/or brightness, could be Thresholding. Thresholding is the process of mapping a certain range of pixels with a specific pixel-value to either 0 or 255, or 0 and 1\goodcite{IP}. Thresholding takes a specific thresholding value, which it then compares to all the pixels of an image. If the pixel-value is lower than the threshold value then it assigns the pixel-value to 0 whilst the reverse operation is applied to pixel-values above the threshold value\goodcite{IP}.\\This will help segment figures that are of different colour and/or brightness from the rest of the image clutter.\medskip \\
 
@@ -158,10 +158,6 @@ This section will compare the resemblance of object recognition, against a likel
 \subsubsection{Object recognition}
 After the creation of candidate objects by the perceptual organization steps, the visual system now has to recognize the objects. This is done by matching the objects, to stored memory in the brain.\\
 
-\begin{center} % TODO: really needed?
-\textit{"Core object recognition is the ability to rapidly discriminate a given visual object from all other possible visual objects without any object-specific or location-specific pre-cuing"}\goodcite{solveVisual}\\
-\end{center}
-
 It makes sense to claim that the visual system must somehow be able to compare objects to memory, despite changes in viewpoints of said object. A visual system that can achieve this, exhibits \textit{invariance}\goodcite{hsp}.\\There are different approaches to how invariance is achieved by the visual system, one of them being the recognition by components model. This model is built on how object recognition depends on; \textit{"identifying the primitive geometrical components that make up the object"}\goodcite{hsp}.\\This is illustrated on \autoref{fig:components}, by looking at figure (c) and figure (d), it is clear how the location of the handle denotes whether the object is a cup or that of a bucket.
 
 \begin{figure}[H]
@@ -171,7 +167,7 @@ It makes sense to claim that the visual system must somehow be able to compare o
     \label{fig:components}
 \end{figure}
 
-Another approach to invariance, is that it is based on a view-specific manner, in which multiple representations of a single object would be stored. Multiple different views of a single object will be stored, and when the current view will give off a specific view of an object, all the stored views will be compared simultaneously.\medskip \\ % TODO ?
+Another approach to invariance, is that it is based on a view-specific manner, in which multiple representations of a single object would be stored. Multiple different views of a single object will be stored, and when the current view will give off a specific view of an object, all the stored views will be compared simultaneously, enabling the brain to recognize the object from differing viewpoints.\medskip \\
 
 \subsubsection{Feature matching}
 Computer-vision specific techniques that exhibit part wise the same traits as the view-specific manner of approaching invariance, is the feature matching.\\Feature matching takes certain features of an object and matches it against objects in a scene and retrieves the most likely match based on distance calculations\goodcite{OpenCV}, see \autoref{fig:feature_matching} for an illustration of how feature matching functions with a scene and a template image.\medskip \\
@@ -200,13 +196,12 @@ Computer-vision specific techniques that exhibit part wise the same traits as th
 %lower number of dimensions is therefore desirable.
 %It has been our goal to develop both a detector
 
-% TODO: Better describe feature matching
-
-Keeping in mind that we still have insufficient knowledge on how exactly object recognition occurs, but by utilising and constructing artificial systems, based on our visual system and the theories of how we perceive the world, a can potential explanation of how it functions could be presented.\\
-This can be correlated to how our perceptual system work and thereby understanding how it exactly functions in the artificial system, A synergy is created between research fields which look at how that system functions and how the perceptual system functions\goodcite{solveVisual}.\\As stated in a paper from the department of Brain and Cognitive Sciences and McGovern Institute for Brain Research;
+Keeping in mind that we still have insufficient knowledge on how exactly object recognition occurs, but by utilising and constructing artificial systems, based on our visual system and the theories of how we perceive the world, a can potential explanation of how it functions could be presented\goodcite{solveVisual}.\\
+The authors of \texttt{How Does the Brain Solve Visual Object Recognition?} claim that the techniques can be explored by applying the theoretical aspect as algorithms in the artificial system, thereby a synergy between the relevant research fields which look at the artificial system in correlation to how perceptual system functions, could be a solution for understanding object recognition\goodcite{solveVisual}.\\
 \begin{center}
-    \textit{"We expect this pace to accelerate, to fully explain human abilities, to reveal ways for extending and generalizing beyond those abilities, and to expose ways to repair broken neuronal circuits and augment normal circuits."}\goodcite{solveVisual}
+    \textit{"We expect this pace to accelerate, to fully explain human abilities, to reveal ways for extending and generalizing beyond those abilities, and to expose ways to repair broken neuronal circuits and augment normal circuits."}\goodcite{solveVisual}\medskip \\
 \end{center}
+Many of the techniques explained in this essay are only potential counterparts, but it can help us explore how our own brain functions in regards to the media-technological topics. A big difference is that computers are accessing data sequentially, whereas the brain can do it near instantly with simultaneous firing neurons..
 % Medialogy related problems. Give at least three examples of technological advancements, where knowledge of human perception has been (or would be crucial) for the technological advances. How was the innovation
 
 % Comments about object recognition theories
@@ -221,7 +216,6 @@ This can be correlated to how our perceptual system work and thereby understandi
 % Color & Eye vs Camera & Digital Sensors
 % BLOB & Thresholding vs Perceptual Organization
 % Feature matching vs Object Recognition
-% TODO
 \newpage
 \section{Bibliography}
 \label{sec:Bibliography}
