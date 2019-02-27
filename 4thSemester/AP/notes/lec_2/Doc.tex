@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{AP - lecture 2}
+\author{Jannick Drews}
+\date{\today}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Pre-lecture - Equations \& Topics}
+Preparation: Chapter 9: Stereo Audio\\
+\begin{itemize}
+  \item Linear panning\\
+      $ x =  \frac{p}{200} + 0.5$\\
+        Where $p$ is the panning value, panning is usually normalized from $-100 - 100$, to $0 - 1$. $ p = p_N$
+  \item Square-law panning\\
+      $ Amp_r = \sqrt{x} $\\
+      $ Amp_l = \sqrt{(1-x)} $
+  \item Sine-law panning\\
+      $ Amp_r = sin(x \cdot \frac{\pi}{2}) $\\
+      $ Amp_l = sin((1-x) \cdot \frac{\pi}{2}) $
+  \item MS Encoding\\
+      $ M = \frac{1}{2}(L + R) $\\
+      $ S = \frac{1}{2}(L - R) $
+  \item MS Decoding\\
+      $ L = M + S = \frac{1}{2}(L + R) + \frac{1}{2}(L - R) = \frac{1}{2} \cdot L + \frac{1}{2} \cdot L $\\
+        $ R = M - S =\frac{1}{2}(L + R)  - \frac{1}{2}(L - R) = \frac{1}{2} \cdot R + \frac{1}{2} \cdot R  $
+    \item Stereo Image widening\\
+        $ width \in [0 , 2] $\\
+        $newSides = width \cdot origSides$\\
+        $newMid = (2 - width) \cdot origMid $
+\end{itemize}
+
+\section{Lecture}
+
+\section{Knowledge}
+\begin{itemize}
+    \item Explain the basis for representing signals in space.\\
+        \textit{.}
+    \item Give examples of how signals can be spatialized in practice\\
+        \textit{.}
+    \item Explain and give examples of amplitude panning.\\
+        \textit{Linear panning, Square-law panning, sine-law panning.}
+\end{itemize}
+
+\section{Important notes}
+
+
+\end{document}
