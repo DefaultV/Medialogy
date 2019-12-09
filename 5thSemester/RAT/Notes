@@ -1,0 +1,9 @@
+ - Depth map
+ - Depth raytracing, how much reflect/refract
+ - Rounding error, optimization is the reasons we normalize vectors
+ - Definition of cosine = adjacent/opposite gives angle
+ - shadowray pr. light source
+ - # of samples is how many rays per pixel, upping this will scale a "higher definition" to have a better look
+ - cross is normal vector
+ - can cross, dot, and project
+ - cosine 90 = 0, das rite
