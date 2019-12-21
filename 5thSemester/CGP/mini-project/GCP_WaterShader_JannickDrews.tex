@@ -36,7 +36,7 @@
 \newcommand{\secref}[1]{\nameref{#1}~\ref{#1}}
 \newcommand{\goodcite}[1]{\textsuperscript{\cite{#1}}}
 
-\addbibresource{Ref.bib}
+%\addbibresource{Ref.bib}
 
 \setlength\parindent{0pt}
 \begin{document}
@@ -89,9 +89,14 @@ Bump maps in shaders is utilized by having a greyscale image or texture tell whe
 
 \subsection{Reflections \& Refraction}
 \label{sec:refl_refr}
+%TODO reflections math, UNITYCG
+The reflections are based on the camera position and aangle towards the object holding the shader.\\
+
+Two vectors are needed to generate reflections based on the camera and object positions. Firstly, the vector from the camera to the object is calculate, then the normal vector gets calculated from the vertex normals. These two variables are then inserted into a \texttt{reflect} function which calculates the reflections needed.
 
 \subsubsection{Grabpass}
 \label{sec:grabpass}
+%TODO Grap-pass code from unity and EXPLAIN
 
 \subsection{Fresnel effect}
 \label{sec:fresnel_effect}
@@ -139,7 +144,8 @@ This gives a better refraction of the object(subjective), compared to when cubem
     \caption{Shader, fresnel effect and additive bumpmap}
     \label{fig:shader_2}
 \end{figure}
-\autoref{fig:shader_2} shows the fresnel effect with some added extra colours from the pre-defined color of the shader and the voronoi bump map colors.
+\autoref{fig:shader_2} shows the fresnel effect with some added extra colours from the pre-defined color of the shader and the voronoi bump map colors. Within the markers the fresnel effect should be quite obvious, standing out as a cyan color which is based on a default color input variable. The fresnel effect in this case does not increase or decrease color but tells the shader how much of the grap-pass is shown(refraction) from the other side of the object. The fresnel effect is based on arbitrary values but can be modified in the editor. %CONFIRM THIS
+%TODO
 
 \begin{figure}[H]
     \centering
@@ -167,11 +173,11 @@ Line 4 to 9 is the core of the function, serving to grab the neighbouring grid t
 
 \section{Discussion}
 \label{sec:discussion}
-
+I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving bump or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi bump-map), instead of going the conventional route.
 
 \section{Conclusion}
 \label{sec:conclusion}
-
+My shader, although arguably could make a performance hit, ... %TODO
 
 
 \newpage
