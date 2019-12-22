@@ -87,6 +87,14 @@ I've used this effect on the vertex shader, applying it in object space as to ge
 \label{sec:bump_map}
 Bump maps in shaders is utilized by having a greyscale image or texture tell where the object should modify the verteces positions. Ergo translating the position of the verteces to a new position after shader application. This can be applied to either the vertex or fragment shader respectively.
 
+\begin{figure}[H]
+    \centering
+    \lstinputlisting[firstline=108, lastline=108]{img/voronoi.shader}
+    \caption{Displacement - code implementation in object space}
+    \label{fig:displacement}
+\end{figure}
+\autoref{fig:displacement} shows the code implementation for the bump map formula used to generate the shaders bump maps based on the voronoi greyscale.
+
 \subsection{Reflections \& Refraction}
 \label{sec:refl_refr}
 %TODO reflections math, UNITYCG
@@ -177,7 +185,8 @@ I would claim that my approach to a water-shader is more artistic than useful. U
 
 \section{Conclusion}
 \label{sec:conclusion}
-My shader, although arguably could make a performance hit, ... %TODO
+%TODO
+My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its bump map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.
 
 
 \newpage
