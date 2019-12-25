@@ -36,7 +36,7 @@
 \newcommand{\secref}[1]{\nameref{#1}~\ref{#1}}
 \newcommand{\goodcite}[1]{\textsuperscript{\cite{#1}}}
 
-%\addbibresource{Ref.bib}
+\addbibresource{Ref.bib}
 
 \setlength\parindent{0pt}
 \begin{document}
@@ -64,7 +64,7 @@ This section will cover all theory related to the shader. This will include; Vor
 
 \subsection{Fragment \& Vertex}
 \label{sec:frag_vert}
-The \textbf{fragment} and \textbf{vertex} shaders are both shaders but they work in different spaces. The vertex shader works on the local space, object space and afterwards converts the space to the clip space. The fragment shader works by modifying the mesh on the clip space, which will finally be convert to screen space.
+The \textbf{fragment} and \textbf{vertex} shaders are both shaders but they work in different spaces. The vertex shader works on the local space, object space and afterwards converts the space to the clip space. The fragment shader works by modifying the mesh on the clip space, which will finally be convert to screen space\cite{progrendervertfrag}.
 
 
 \subsection{Voronoi}
@@ -89,7 +89,7 @@ Bump maps in shaders is utilized by having a greyscale image or texture tell whe
 
 \begin{figure}[H]
     \centering
-    \lstinputlisting[firstline=108, lastline=108]{img/voronoi.shader}
+    \lstinputlisting[firstline=103, lastline=108]{img/voronoi.shader}
     \caption{Displacement - code implementation in object space}
     \label{fig:displacement}
 \end{figure}
@@ -101,6 +101,24 @@ Bump maps in shaders is utilized by having a greyscale image or texture tell whe
 The reflections are based on the camera position and aangle towards the object holding the shader.\\
 
 Two vectors are needed to generate reflections based on the camera and object positions. Firstly, the vector from the camera to the object is calculate, then the normal vector gets calculated from the vertex normals. These two variables are then inserted into a \texttt{reflect} function which calculates the reflections needed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/nvidia}
+	\caption{Nvidia documentation - reflect \& refract}
+    \label{fig:nvidia_refl_refr}
+\end{figure}
+\autoref{fig:nvidia_refl_refr} shows the documentation for the refract and reflection functions which Unity utilizes.
+Snell's law:
+$$ \eta_1 sin\theta_i = \eta_2 sin\theta_t $$
+This formula describes the vector angle shift when entering another medium from a first.
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=.75\textwidth]{img/snell}
+	\caption{Snell's law illustration\protect\footnotemark}
+    \label{fig:snells_illustration}
+\end{figure}
+\footnotetext{\url{http://s3-ap-southeast-1.amazonaws.com/subscriber.images/physics/2016/10/28112355/Snells-Law.jpg}}
+\autoref{fig:snells_illustration} shows how Snell's law would work with an example vector between two mediums.
 
 \subsubsection{Grabpass}
 \label{sec:grabpass}
