@@ -52,7 +52,14 @@
 
 \section{Abstract}
 \label{sec:abstract}
-
+%what is the problem
+Water shaders are finicky when it comes to realism. A water shader would be easy to implement, if it did not need reflections and refractions to come across realistic.\\
+%what others have done
+Usually the water shaders are made with a seamless normal map multiplied over a time variable. The shaders also includes refractions which must in addition to transforming the objects behind the mesh with the shader applied, visually in some arbitrary direction based on, usually, snells law.\\
+%why its still a problem
+We have come far with water shaders, you could even say that we have reached a good verdict on the realistic looks of it.
+%what i propose
+I chose to make a water shader with a voronoi bump map on the vertex level to create an artistic approach compared to making the standard convetional water shaders. This was to see if voronoi could make realistic waves compared to a static normal map.
 
 \section{Introduction}
 \label{sec:introduction}
@@ -60,7 +67,7 @@ A water shader can be built in many different ways, this report will cover how I
 
 \section{Theory}
 \label{sec:theory}
-This section will cover all theory related to the shader. This will include; Voronoi, bump maps, reflections and refractions, fragment and vertex knowledge, fresnel effect, transparency, culling, z-buffer and grabpass.
+This section will cover all theory related to the shader. This will include; Voronoi, bump maps, reflections and refractions, fragment and vertex knowledge, fresnel effect, transparency, culling, and grabpass.
 
 \subsection{Fragment \& Vertex}
 \label{sec:frag_vert}
@@ -118,11 +125,18 @@ This formula describes the vector angle shift when entering another medium from 
     \label{fig:snells_illustration}
 \end{figure}
 \footnotetext{\url{http://s3-ap-southeast-1.amazonaws.com/subscriber.images/physics/2016/10/28112355/Snells-Law.jpg}}
-\autoref{fig:snells_illustration} shows how Snell's law would work with an example vector between two mediums.
+\autoref{fig:snells_illustration} shows how Snell's law would work with an example vector between two mediums. We can see that the vector changes direction based on the entering angle. Depending on the refraction index, the vector will then move in a new direction if the refraction indeces differs from eachother.
 
 \subsubsection{Grabpass}
 \label{sec:grabpass}
 %TODO Grap-pass code from unity and EXPLAIN
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/grabpass}
+	\caption{Grabpass illustration}
+	\label{fig:grabpass}
+\end{figure}
+\autoref{fig:grabpass} shows the illustration of how grabpass works. When the frame buffer is reached in the pipeline, it projects that buffer onto a render texture, so it kind of "grabs" the screen before it arrives at the final output. We can then modify this render texture however we want and use it for e.g. refractions.
 
 \subsection{Fresnel effect}
 \label{sec:fresnel_effect}
@@ -199,12 +213,14 @@ Line 4 to 9 is the core of the function, serving to grab the neighbouring grid t
 
 \section{Discussion}
 \label{sec:discussion}
-I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving bump or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi bump-map), instead of going the conventional route.
+I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving bump or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi bump-map), instead of going the conventional route.\\
+
+One problem which I could not overcome without a possible define statement, was that the normals of a plane in Unity would just optimise to one normal, whereas in my 3D program, when I upped the amount of verteces, and thereby the amount of normals I imagined I could affect multiple normals differently, ergo having the shader work both on round and square objects. However Unity( to the best of my knowledge ), optimises this and if multiple normals have the same direction, it changes all the normals into a single normal.
 
 \section{Conclusion}
 \label{sec:conclusion}
 %TODO
-My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its bump map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.
+My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its bump map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.\\It then uses fresnel to determine reflectiveness, depending on the camera, like in real-life if a person was to look into a puddle from different angles.
 
 
 \newpage
