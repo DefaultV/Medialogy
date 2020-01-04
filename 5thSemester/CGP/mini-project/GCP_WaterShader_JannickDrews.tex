@@ -193,12 +193,15 @@ This gives a better refraction of the object(subjective), compared to when cubem
     \caption{Shader}
     \label{fig:shader_3}
 \end{figure}
+\autoref{fig:shader_3} shows the reflections on the shader.\\
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/shader_4}
     \caption{Shader}
     \label{fig:shader_4}
 \end{figure}
+\autoref{fig:shader_4} shows the shader applied to a plane. Where, instead of the normals, the verteces are modified by the bump map. This was because Unity optimises normals, ergo a single plane, no matter the amount of verteces, would have just a single normal vector. Modifying the normal vectors only would then just make the whole plane bounce up and down, since only a single normal vector determines the bump.
 
 \begin{figure}[H]
     \centering
@@ -210,6 +213,24 @@ This gives a better refraction of the object(subjective), compared to when cubem
 This code is a very standard or conventional way of implementing voronoi features, besides the additional for-loop on the z axis.\\
 
 Line 4 to 9 is the core of the function, serving to grab the neighbouring grid to later use as an offset. The \texttt{pointt} variable will then hold a random position and have that position modified by time and arbitrary numbers.\\The distance difference will then be calculated and used for colouring the cell or grid square, compared to other points in neighbouring grid cells.
+
+\begin{figure}[H]
+    \centering
+    \lstinputlisting[firstline=108, lastline=111]{img/voronoi.shader}
+    \caption{Voronoi - return of the vertex shader}
+    \label{fig:voronoi_shader_code_vertex}
+\end{figure}
+\autoref{fig:voronoi_shader_code_vertex} shows a code snippet from the shader. This includes the return of the vertex shader in addition to the grabpass and the displacement of the verteces.
+
+%Explain lines %TODO
+%Computes texture coordinate for sampling a GrabPass texure. Input is clip space position.
+\begin{figure}[H]
+    \centering
+    \lstinputlisting[firstline=145, lastline=147]{img/voronoi.shader}
+    \caption{Voronoi - return of the fragment shader}
+    \label{fig:voronoi_shader_code_fragment}
+\end{figure}
+\autoref{fig:voronoi_shader_code_fragment}, shows a code snippet from the shader. This is the return of the fragment shader with the final pixel colors applied. This return is quite large since it holds multiple different fresnel effects applied individually.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -223,7 +244,7 @@ One problem which I could not overcome without a possible define statement, was 
 My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its bump map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.\\It then uses fresnel to determine reflectiveness, depending on the camera, like in real-life if a person was to look into a puddle from different angles.
 
 
-\newpage
+%\newpage
 \section{Bibliography}
 \printbibliography
 

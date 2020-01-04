@@ -105,10 +105,10 @@ for (int y = -1; y <= 1; y++) {
                 bump = float4(pow(bump.xyz, 3.0), 1.0);
                 o.colors = bump;
 
-                float4 displacement = float4(v.normals * bump * _MaxHeight, 0.0) + v.vertex;
-                o.vertex = UnityObjectToClipPos(v.vertex + displacement*0.01);
-                o.screenPos = ComputeGrabScreenPos(o.vertex);
-                return o;
+float4 displacement = float4(v.normals * bump * _MaxHeight, 0.0) + v.vertex;
+o.vertex = UnityObjectToClipPos(v.vertex + displacement*0.01);
+o.screenPos = ComputeGrabScreenPos(o.vertex);
+return o;
             }
 
 
@@ -140,9 +140,11 @@ for (int y = -1; y <= 1; y++) {
                 //return _WaterColor;
                 //return fresnel;
                 //return (texCUBE(_Cube, refractedDir)*min((pow(fresnel, 6.0)), 1.0) + _WaterColor / d + i.colors / d);
-                return (float4(distortColor, 1.0)*(1 - trans)*.5) + (_WaterColor * trans)
-                    + (min(i.colors, 1.0) / d) * trans_refl2*2.0 + i.colors/d
-                    + (texCUBE(_Cube, reflectedDir) * trans_refl / d) * trans_refl2*2.0;// + (fresnel/2.0);
+
+
+return (float4(distortColor, 1.0)*(1 - trans)*.5) + (_WaterColor * trans)
+	+ (min(i.colors, 1.0) / d) * trans_refl2*2.0 + i.colors/d
+	+ (texCUBE(_Cube, reflectedDir) * trans_refl / d) * trans_refl2*2.0;// + (fresnel/2.0);
 
             }
             ENDCG
