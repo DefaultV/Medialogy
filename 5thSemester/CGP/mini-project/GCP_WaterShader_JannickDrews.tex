@@ -140,14 +140,15 @@ This formula describes the vector angle shift when entering another medium from 
 
 \subsection{Fresnel effect}
 \label{sec:fresnel_effect}
-The Fresnel effect is blablabla..\\It can be used to visualize reflective objects color, when viewed at a critical angle. The effect is a bright surface, which will form around the object, no matter the camera angle, and is applied in clipspace.
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=.75\textwidth]{img/fresnel}
-%    \caption{Voronoi\protect\footnotemark}
-%    \label{fig:voronoi}
-%\end{figure}
-
+The Fresnel effect gives the mesh color around its edges. The effect is illustrated on \autoref{fig:fresnel}.\\It can be used to visualize reflective objects color, when viewed at a critical angle. The effect is a bright surface, which will form around the object, no matter the camera angle, and is applied in clipspace.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{img/fresnel}
+    \caption{Fresnel Effect\protect\footnotemark}
+    \label{fig:fresnel}
+\end{figure}
+\footnotetext{\url{http://files.gamebanana.com/img/ss/tuts/59208073d034b.jpg}}
+This will be used to generate the reflective surface effect, when you look at water from a certain angle, e.g. looking into a puddle of water from a distance away.
 
 
 % Voronoi
@@ -193,7 +194,7 @@ This gives a better refraction of the object(subjective), compared to when cubem
     \caption{Shader}
     \label{fig:shader_3}
 \end{figure}
-\autoref{fig:shader_3} shows the reflections on the shader.\\
+\autoref{fig:shader_3} shows the reflections on the shader.\\This can be hard to see, but the value can be upped if needed. The reflection is based on cubemap projection.
 
 \begin{figure}[H]
     \centering
@@ -236,7 +237,7 @@ Line 4 to 9 is the core of the function, serving to grab the neighbouring grid t
 \label{sec:discussion}
 I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving bump or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi bump-map), instead of going the conventional route.\\
 
-One problem which I could not overcome without a possible define statement, was that the normals of a plane in Unity would just optimise to one normal, whereas in my 3D program, when I upped the amount of verteces, and thereby the amount of normals I imagined I could affect multiple normals differently, ergo having the shader work both on round and square objects. However Unity( to the best of my knowledge ), optimises this and if multiple normals have the same direction, it changes all the normals into a single normal.
+One problem which I overcame with define statements, was that the normals of a plane in Unity would just optimise to one normal, whereas in my 3D program, when I upped the amount of verteces, and thereby the amount of normals I imagined I could affect multiple normals differently, ergo having the shader work both on round and square objects. However Unity( to the best of my knowledge ), optimises this and if multiple normals have the same direction, it changes all the normals into a single normal.
 
 \section{Conclusion}
 \label{sec:conclusion}
