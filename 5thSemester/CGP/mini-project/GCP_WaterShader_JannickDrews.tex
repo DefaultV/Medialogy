@@ -59,15 +59,15 @@ Usually the water shaders are made with a seamless normal map multiplied over a 
 %why its still a problem
 We have come far with water shaders, you could even say that we have reached a good verdict on the realistic looks of it.
 %what i propose
-I chose to make a water shader with a voronoi bump map on the vertex level to create an artistic approach compared to making the standard convetional water shaders. This was to see if voronoi could make realistic waves compared to a static normal map.
+I chose to make a water shader with a voronoi displacement map on the vertex level to create an artistic approach compared to making the standard convetional water shaders. This was to see if voronoi could make realistic waves compared to a static normal map.
 
 \section{Introduction}
 \label{sec:introduction}
-A water shader can be built in many different ways, this report will cover how I developed my shader, the challenges I faced and how I reached my goals. To start with I was looking for a unique way to develop the water shader, usually the shader is made using a bump or normal map for the water itself, in this project I was aiming for using voronoi as the bump map.
+A water shader can be built in many different ways, this report will cover how I developed my shader, the challenges I faced and how I reached my goals. To start with I was looking for a unique way to develop the water shader, usually the shader is made using a displacement map or normal map for the water itself, in this project I was aiming for using voronoi as the displacement map.
 
 \section{Theory}
 \label{sec:theory}
-This section will cover all theory related to the shader. This will include; Voronoi, bump maps, reflections and refractions, fragment and vertex knowledge, fresnel effect, transparency, culling, and grabpass.
+This section will cover all theory related to the shader. This will include; Voronoi, displacement maps, reflections and refractions, fragment and vertex knowledge, fresnel effect, transparency and grabpass.
 
 \subsection{Fragment \& Vertex}
 \label{sec:frag_vert}
@@ -87,12 +87,12 @@ The voronoi effect is made by having, typically a grid of 9 cells which each hav
 \footnotetext{\url{https://www.codeproject.com/KB/recipes/882739/Fig_1.png}}
 \autoref{fig:voronoi} shows the voronoi effect. Each cell is uniquely coloured to better showcase the effect, the voronoi effect is usually coupled with a time variable with a sinus or cosinus function applied to make each cell move with time passed.\\
 
-I've used this effect on the vertex shader, applying it in object space as to generate a bump map which I utilize to visualize the waves on the object. The voronoi affect is applied via the normals of the mesh.
+I've used this effect on the vertex shader, applying it in object space as to generate a displacement map which I utilize to visualize the waves on the object. The voronoi affect is applied via the normals of the mesh.
 % UI scaling etc
 
-\subsection{Bump maps}
+\subsection{Displacement maps}
 \label{sec:bump_map}
-Bump maps in shaders is utilized by having a greyscale image or texture tell where the object should modify the verteces positions. Ergo translating the position of the verteces to a new position after shader application. This can be applied to either the vertex or fragment shader respectively.
+Displacement maps in shaders is utilized by having a greyscale image or texture tell where the object should modify the verteces positions. Ergo translating the position of the verteces to a new position after shader application. This can be applied to either the vertex or fragment shader respectively.
 
 \begin{figure}[H]
     \centering
@@ -100,7 +100,7 @@ Bump maps in shaders is utilized by having a greyscale image or texture tell whe
     \caption{Displacement - code implementation in object space}
     \label{fig:displacement}
 \end{figure}
-\autoref{fig:displacement} shows the code implementation for the bump map formula used to generate the shaders bump maps based on the voronoi greyscale.
+\autoref{fig:displacement} shows the code implementation for the displacement formula used to generate the shaders displacement maps based on the voronoi greyscale.
 
 \subsection{Reflections \& Refraction}
 \label{sec:refl_refr}
@@ -182,10 +182,10 @@ This gives a better refraction of the object(subjective), compared to when cubem
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/shader_2}
-    \caption{Shader, fresnel effect and additive bumpmap}
+    \caption{Shader, fresnel effect and additive displacement map}
     \label{fig:shader_2}
 \end{figure}
-\autoref{fig:shader_2} shows the fresnel effect with some added extra colours from the pre-defined color of the shader and the voronoi bump map colors. Within the markers the fresnel effect should be quite obvious, standing out as a cyan color which is based on a default color input variable. The fresnel effect in this case does not increase or decrease color but tells the shader how much of the grap-pass is shown(refraction) from the other side of the object. The fresnel effect is based on arbitrary values but can be modified in the editor. %CONFIRM THIS
+\autoref{fig:shader_2} shows the fresnel effect with some added extra colours from the pre-defined color of the shader and the voronoi displacement map colors. Within the markers the fresnel effect should be quite obvious, standing out as a cyan color which is based on a default color input variable. The fresnel effect in this case does not increase or decrease color but tells the shader how much of the grap-pass is shown(refraction) from the other side of the object. The fresnel effect is based on arbitrary values but can be modified in the editor. %CONFIRM THIS
 %TODO
 
 \begin{figure}[H]
@@ -202,7 +202,7 @@ This gives a better refraction of the object(subjective), compared to when cubem
     \caption{Shader}
     \label{fig:shader_4}
 \end{figure}
-\autoref{fig:shader_4} shows the shader applied to a plane. Where, instead of the normals, the verteces are modified by the bump map. This was because Unity optimises normals, ergo a single plane, no matter the amount of verteces, would have just a single normal vector. Modifying the normal vectors only would then just make the whole plane bounce up and down, since only a single normal vector determines the bump.
+\autoref{fig:shader_4} shows the shader applied to a plane. Where, instead of the normals, the verteces are modified by the displacement map. This was because Unity optimises normals, ergo a single plane, no matter the amount of verteces, would have just a single normal vector. Modifying the normal vectors only would then just make the whole plane bounce up and down, since only a single normal vector determines the displacement.
 
 \begin{figure}[H]
     \centering
@@ -235,14 +235,14 @@ Line 4 to 9 is the core of the function, serving to grab the neighbouring grid t
 
 \section{Discussion}
 \label{sec:discussion}
-I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving bump or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi bump-map), instead of going the conventional route.\\
+I would claim that my approach to a water-shader is more artistic than useful. Usually water-shaders are implemented with a moving displacement or normal-map to save frames and achieve a look that better resembles actual waves. My reasoning to go with this approach however, was to try and challenge myself in a more code-heavy implementation (voronoi displacement-map), instead of going the conventional route.\\
 
 One problem which I overcame with define statements, was that the normals of a plane in Unity would just optimise to one normal, whereas in my 3D program, when I upped the amount of verteces, and thereby the amount of normals I imagined I could affect multiple normals differently, ergo having the shader work both on round and square objects. However Unity( to the best of my knowledge ), optimises this and if multiple normals have the same direction, it changes all the normals into a single normal.
 
 \section{Conclusion}
 \label{sec:conclusion}
 %TODO
-My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its bump map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.\\It then uses fresnel to determine reflectiveness, depending on the camera, like in real-life if a person was to look into a puddle from different angles.
+My shader, although arguably could make a performance hit, it has an unconventional implementation, using voronoi as its displacement map. Depending on the voronoi greyscale color the shader will then modify the vertex positions based on a formla.\\It then uses fresnel to determine reflectiveness, depending on the camera, like in real-life if a person was to look into a puddle from different angles.
 
 
 %\newpage
