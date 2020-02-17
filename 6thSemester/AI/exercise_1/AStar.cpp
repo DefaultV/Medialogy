@@ -178,7 +178,7 @@ void Astar(int s_x, int s_y, int g_x, int g_y, int newscore){
 int main(int argc, char** argv){
 	srand(1);
 	randomize_array();
-	Astar(5, 5, 20, 20, 0);
+	Astar(atoi(argv[1]), atoi(argv[2]), 20, 20, 0);
 	//printf("%d", man_dist(2,3,5,5));
 	return 1;
 }
