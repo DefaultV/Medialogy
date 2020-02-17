@@ -102,13 +102,20 @@ int getSmallestInGrid(){
 	for (int i = 0; i < grid_y; i++){
 		for (int j = 0; j < grid_x; j++){
 			if (score_grid[i][j] > 0){
+				if (small_x == 0 && small_y == 0){
+					if (score_grid[i][j] > 0){
+						small_x = i;
+						small_y = j;
+					}
+				}
 //				printf("bigger: %d\n", score_grid[i][j]);
 				if (score_grid[i][j] < score_grid[small_x][small_y]){
 //					printf("newsmol: %d\n", score_grid[i][j]);
 					small_x = i;
 					small_y = j;
 				}
-				if (score_grid[i][j] > score_grid[small_x][small_y] && score_grid[small_x][small_y] == -1){
+				if (score_grid[i][j] > score_grid[small_x][small_y] 
+						&& score_grid[small_x][small_y] == -1){
 					small_x = i;
 					small_y = j;
 				}
@@ -116,6 +123,29 @@ int getSmallestInGrid(){
 		}
 	}
 	return score_grid[small_x][small_y];
+}
+
+void clear(){
+	for (int n = 0; n < 5; n++)
+		printf( "\n\n\n\n\n\n\n\n\n\n" );
+}
+
+int stepcount;
+int totalchecks;
+
+void getStats(){
+	printf("\n\n------------\nGoal reached\n------------\n");
+	for (int i = 0; i < grid_y; i++){
+		for (int j = 0; j < grid_y; j++){
+			if (score_grid[i][j] == -1){
+				stepcount++;
+			}
+			if (score_grid[i][j] > 0){
+				totalchecks++;
+			}
+		}
+	}
+	printf("Path steps -> %d/%d\nTotal checks -> %d/%d\n", stepcount, grid_x*grid_y, totalchecks+stepcount, grid_x*grid_y);
 }
 
 void Astar(int s_x, int s_y, int g_x, int g_y, int newscore){
@@ -126,6 +156,7 @@ void Astar(int s_x, int s_y, int g_x, int g_y, int newscore){
 		printf("returning");
 		return;
 	}
+	clear();
 	//score_grid[s_x][s_y] = newscore;
 	calculateAdj(s_x, s_y, g_x, g_y);
 	//	calculateAdj(3, 3, g_x, g_y);
@@ -135,19 +166,19 @@ void Astar(int s_x, int s_y, int g_x, int g_y, int newscore){
 	score_grid[s_x][s_y] = -1;
 	current_score = grid[small_x][small_y];
 	printf("%d -> %d, %d", score_grid[small_x][small_y], small_x, small_y);
-	while(std::cin.get() != '\n'){
-		printf("net");
-	}
 	if (small_x == 19 && small_y == 19){
-		printf("GOAL");
+		getStats();
 		return;
+	}
+	while(std::cin.get() != '\n'){
 	}
 	Astar(small_x, small_y, g_x, g_y, 0);
 }
 
 int main(int argc, char** argv){
+	srand(1);
 	randomize_array();
-	Astar(0, 0, 20, 20, 0);
+	Astar(5, 5, 20, 20, 0);
 	//printf("%d", man_dist(2,3,5,5));
 	return 1;
 }
