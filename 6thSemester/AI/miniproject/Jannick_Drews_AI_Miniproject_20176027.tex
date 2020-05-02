@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\lstset{language=python,
+                breaklines=true,
+                basicstyle=\ttfamily\scriptsize,
+                numbers=left,
+                language=C,
+                keywordstyle=\color{blue}\ttfamily\bfseries,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{commentgreen}\ttfamily,
+                frame=single,
+                morecomment=[l][\color{magenta}]{\#}
+}
+
+\title{Artificial Intelligence Miniproject\\Perceptron learning}
+\author{Jannick Drews}
+
+\begin{document}
+
+\maketitle
+
+\section{Dataset \& modifications}
+The dataset used in this project is from the Kaggle website:
+\url{
+		https://www.kaggle.com/spscientist/students-performance-in-exams
+	}\\
+I used this dataset, converted it into 4 different categories which I feed into my network. These 4 categories are;
+\begin{itemize}
+	\item Gender
+	\item Test preparation
+	\item Parents educational degree ($>$ associates degree)
+	\item If the student ate lunch
+\end{itemize}
+The student would need a score $> 65$ out of a 100 to pass.
+
+\section{code}
+\lstinputlisting{NNmini.py}
+
+\end{document}
+
