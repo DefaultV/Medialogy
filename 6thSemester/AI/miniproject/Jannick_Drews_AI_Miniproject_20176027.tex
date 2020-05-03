@@ -38,6 +38,13 @@ The student would need a score $> 65$ out of a 100 to pass.
 
 \section{code}
 \lstinputlisting{NNmini.py}
+Up until line 60, the code is merely adjusting the needed data for the AI to handle. This includes reading from the CSV file and appending it properly to the needed input data. Getting tthe data for whether the student have had lunch, parental education, if they prepared and their gender.\\
+
+Two functions are declared at line 62 and 65. These are the sigmoid and sigmoid derivative functions used for the feedforward and backpropagation.\\
+The weights are initialized randomly as well as the bias at lines 68 and 69.\\
+Lines 72 to 88 contains the learning for the network. This is done in a loop to 2500 for learning with epochs.\\
+Lines 76 to 77 contains the feedforward instructions. With taking the sum of the dot products of the set with its weights, with the bias added afterwards. This is then put into the sigmoid function for the output.\\
+Lines 80 to 84 contains the backpropagation. Finding the error margin compared to the real result to see how far off the guess was. Lines 85 and 88 then adjusts the bias and weights of the network before we try again in the next loop.
+
 
 \end{document}
-
