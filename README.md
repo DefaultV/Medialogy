@@ -1,4 +1,4 @@
-# Uni
+# University - Medialogy
 ## All my related university work
 ## Collection is from 3rd semester and upwards.
 ### 3rd Semester
