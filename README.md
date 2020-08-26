@@ -1,6 +1,13 @@
 # University - Medialogy
 ## All my related university work
-## Collection is from 3rd semester and upwards.
+
+### 1st Semester
+Audio-visual Sketching (AVS)<br>
+
+### 2nd Semester
+Interaction Design (ID)<br>
+Programming for Interaction (PI)<br>
+
 ### 3rd Semester
 Image-processing (IP)<br>
 Human senses and perception (HSP)<br>
