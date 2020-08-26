@@ -1,0 +1,59 @@
+*a
+-> 1 CPU associated with 0 to more controllers
+-> 1 SCSIController is derived from controller
+-> 1 to 4 DiskDrives are associated with 1 SCSIController
+
+*b
+-> 1 Thermostat is associated to 1 Room
+-> 1 Thermostat is associated to 0 or more Heaters
+-> ElectricHeater is derived from Heater
+-> AubeTH101D is derived from Thermostat
+
+2.
+DESIGN THAT DIAGRAM
+
+3.
+.a
+-> Derivation
+
+.b
+-> e()
+-> d()
+
+.c
+-> d()
+
+.d
+-> variable C
+
+4.
+.a
+-> No
+
+.b
+-> Yes
+
+.c
+-> method overriding
+
+.d
+-> Time
+
+.e
+-> Time
+
+5.
+.a
+-> multiply
+
+.b
+-> int
+
+.c
+-> x and y, both have type int
+
+.d
+-> multiply(int,int)
+
+.e
+-> Public

@@ -1,0 +1,359 @@
+-- 1.5 The Process of Interaction Design --
+
+Establishing requirements 1 -> Who are target users
+Designing alternatives    2 -> Suggesting ideas for meeting the requirements
+Prototyping               3 -> Evaluate through interaction
+Evaluating                4 -> Determine usability and accetability 
+
+--------------------------------------------------------
+-- 1.6.1 Usability Goals --
+
+effective to use -> 		(effectiveness)
+efficient to use -> 		(efficiency)
+safe to use -> 			(safety)
+having good utility -> 		(utility)
+easy to learn -> 		(learnability)
+easy to remember how to use -> 	(memorability).
+
+--------------------------------------------------------
+
+Low fidelity prototypes -> e.g paper hat for imitation
+High fidelity prototypes -> e.g nearly final hat
+
+--------------------------------------------------------
+-- Interface 6.* --
+
+Window design -> enabling more information but sacrificing overview, some have fixed this (mac with swipe view)
+Form filling -> suggestions based on prefix words
+Menu interfaces -> Flat lists, drop-down, pop-up, contextual and expanding (scrolling & cascade(sideways drop"down"))
+
+-- 6.3 --
+Emerging class of HCI sybtle triggered by information obtained imlicitly from the user. (Solovey et al 2014) Using brain, body, behave, and environmental sensors. Providing a whole new aspect of HCI.
+
+--------------------------------------------------------
+-- The process 9.* --
+User-centered design: User guides designer
+Activity-centered design: Behavior surrounding particular tasks (user behaviour rather than need)
+Systems design: Structured, rigorous and holistic design approach, focus: context for complex problems
+Genius design: System(the people, computers, objects, devices) are center of attention -> user only sets goals
+(Genius design differs, relies solely on experience and creative flair of a designer)
+
+Prototyping is important (Get requirements and make ONE prototype and refine until complete)
+user involvement should be balanced, too much can lead to problems
+
+-- 9.2.3 --
+User centered approach:
+* Early focus on users and tasks
+* Empirical measurement
+* Iterative design
+
+
+Establish requirements <-> design alternatives <-> prototype -> evaluate -> (design alternatives) -> revert or final product
+
+--------------------------------------------------------
+-- Cognition 3.* --
+
+-- What is cognition 3.2 --
+* Attention
+* Perception
+* Memory
+* Learning
+* Reading, speaking & listening
+* Problem solving, planning, reasoning & decision making
+(Rare for one to occur in isolation)
+
+
+--------------------------------------------------------
+-- Understanding and Conceptualizing interaction 2.* --
+
+* Problem space -> Assumptions and claims, highlight those that are vague or wanting, poorly constructed design ideas can be reformulated.
+Explicate and explore problems for each role, leading to a specific avenue of investigation agreed on by the team.
+* Concenptualize interaction
+->  Metaphors and analogies that convey to people how to understand what a product is for and how to use it for an activity (e.g.
+    browsing, bookmarking).
+->  The concepts that people are exposed to through the product, including the task–domain objects they create and manipulate, their
+    attributes, and the operations that can be performed on them (e.g. saving, revisiting, organizing).
+->  The relationships between those concepts (e.g. whether one object contains another, the relative importance of actions to others,
+    and whether an object is part of another).
+->  The mappings between the concepts and the user experience the product is designed to support or invoke (e.g. one can revisit
+    through looking at a list of visited sites, most-frequently visited, or saved websites).
+The best models appear obvious, operations are intuitive to use -> can be based on overly complex conceptual models when upgraded /w too many functions. Offering multiple ways of doing one thing can be weighed against a constrained interface that offers only one way.
+* Paradigms, visions, theories, models and frameworks informing interaction design ->
+->  To follow a particular paradigm means adopting a set of practices that a community has agreed upon. These include:
+    the questions to be asked and how they should be framed;
+->  the phenomena to be observed;
+->  the way in which findings from studies are to be analyzed and interpreted (Kuhn, 1972)
+(IoT) -> all connecte through internet with their own with unique identifier.
+
+* Future visions
+->  How to enable people to access and interact with information in their work, social, and everyday lives, using an assortment of
+    technologies.
+->  How to design user experiences for people using interfaces that are part of the environment but where there are no obvious
+    controlling devices.
+->  How and in what form to provide contextually relevant information to people at appropriate times and places to support them while
+    on the move.
+->  How to ensure that information that is passed around via interconnected displays, devices, and objects is secure and trustworthy.
+
+Gestalt laws of grouping(principles)
+* Proximity
+* Similarity
+* Common region
+* Continueity
+* Focal point
+* Figure/ground -> relationship between object and surrounding space
+* Closure
+
+
+--------------------------------------------------------
+-- Data gathering 7.* --
+
+Data gathering <-> Analysis and interpretation <-> Establishment of requirements (Identifying needs & establishing requirements)
+Common 3 forms:
+ * Questionnarires (May be Open-ended, check boxes || rating scales)
+ * Interviews -> Individual / Focus group (Unstructured / Structured / Semi-structured / Group interview)
+ * Observation -> Direct / Indirect
+ * Studying ddocumentation
+ * Similar products
+
+Influence
+* Focus of the study
+* Involved participants
+* Nature of the technique
+* Available resources
+
+*Goal setting.
+  In relation to what the data should be pointed towards, will influence the nature of data gathering.
+*Identifying participants.
+  What kind of people are we working with (Characteristics, capabilities. What are they trying to achieve, how are they currently achieving it?, Can it be more efficient || more enjoyable manner?)
+  ** Probability sampling
+    -Simple random sampling / stratified sampling
+  ** Non-probability sampling
+    -Convenience sampling || volunteer panels
+    ** Convenience sampling
+      -Available rather than specifically selected
+*The relationship between the data collector and the data provider (Participants).
+  Should be clear and professional -> sign a consent form.
+*Triangulation.
+  1. Triangulation of data means that data is drawn from different sources at different times, in different places, or from different people
+    (possibly by using a different sampling technique).
+  2. Investigator triangulation means that different researchers (observers, interviewers, etc.) have been used to collect and interpret the
+    data.
+  3. Triangulation of theories means the use of different theoretical frameworks through which to view the data or findings.
+  4. Methodological triangulation means to employ different data gathering techniques.
+*Pilot studies.
+  Do a pilot study before the real deal, participants can be unpredictable.
+  It can save time, something might be wrong with a question or scenario.
+  Getting comments from peers or collegues can be a substitue for a pilot study.
+
+--------------------------------------------------------
+-- Data analysis 8.* --
+Simple quantitative analysis  -> Basically How much from 1 - 5 scale. (Scatter diagram can isolate outliers) (Numbers vs not numbers) (Verification vs exploration) [SEE P. 278] <Mode, Median, Mean>
+Simple qualitative analysis   -> Identify recurring patters or themes e.g Usability test with UP. <PROBLEM NR#> 
+Detailed analysis in qualitative areas can be: Themes, patterns, categories. Another is: Critical incident technique (p. 242)
+Grounded theory: -> The aim of grounded theory is to develop a theory that fits a set of collected data. In this context, theory is: “a set   of well-developed concepts related through statements of relationship, which together constitute an integrated framework that can be used   to explain or predict phenomena” (Strauss and Corbin, 1998).
+
+--------------------------------------------------------
+-- Establishing requirements 10.* --
+What -> Functional requirements
+How -> Non-functional requirements
+*(Requirements activity) 2 aims -> (1)Understand as much as possible about the user, activities & context of it. (2)Produce set of stable requirements to form a basis to start designing. Get feedback, the end goal is to produce this set of requirements. -> Requirements activity.
+*(How can we achieve this?) The activity is iterative, keeps changing. gather data -> analyse -> interpret -> extract info.
+Look at page 285, for figure of the importance of getting it right the first time, fixing bugs later can be very costly.
+
+* Functional requirements -> What should the product do (Fundamental)
+* Data requirements       -> Capture type, volatility, size/amount, persistence, accuracy and value of specified data.
+* Environmental requirements    -> Which circumstances should the product operate. (4 aspects to consider when establishing requirements)
+  * Physical environment        -> Lighting, noise, movement and dust in operational environment (User equipment, crowded, etc)
+  * Social environment          -> Collaboration & coordination needs to be explored, e.g. will data need to be shared? Does it have to be sync?
+  * Organizational environment  -> How good is user support going to be, effeciency and stable communications infrastructure.
+  * Technical environement      -> What techs will the product need to be compatible with, what limitations are relevant?
+
+* User -> Non-frequent user will need instructions whereas frequent user will need more power of control and flexible interaction.
+(Remember personas) -> Rich descriptions of typical users of the product. -> 
+    "Each persona has a name, often a photograph, and some personal details such as what they do in their leisure time.
+    It is the addition of precise, credible details that helps designers to see the personas as real potential users, 
+    and hence as people they can design for."
+---
+---
+Interviews      -> good for exploring issues, semi-structured or unstructured interviews are good early to elicit scenarios.
+Focus group     -> good for gaining consensus view and highlighting areas of conflict and disagreement during the requirements activity.
+Questionnaires  -> gaining initial responses and after analysis choose a person for an interview,
+                   or be used to get a wider perspective on particular issues
+Direct observation -> Understand the nature of the tasks and context in which they are explored.
+Indirect observation -> if a product is evolving or being developed iteratively, this is for later use to log and put observation into diaries
+Studying documentation -> Manuals & other documentation serve as good source of data about steps involved. good for understanding legislation
+                          and getting some background information on the work
+Researching similar products -> to get or help prompt requirements.
+---
+---
+In short 
+: "observation to understand the context of task performance
+: interviews to target specific user groups
+: questionnaires to reach a wider population
+: focus groups to build a consensus view."
+---
+---
+Five models?
+(0)Contextual inquiry -> rests on four main principles: context, partnership, interpretation, and focus. Apprenticeship model, the designer works as an apprentice to the user.
+(1)The context principle emphasizes the importance of going to the workplace and seeing what happens.
+(2)The interpretation principle says that the observations must be interpreted in order to be used in design, and this interpretation should
+also be developed in cooperation between the user and the developer.
+(3)the focus principle, is related to our discussions in Chapter 7 about keeping the data gathering focused on your goals
+---
+---
+Data gathering guidelines for requirements:
+* Focus on identifying the stakeholders’ needs.
+* Involve all the stakeholder groups.
+* Involving only one representative from each stakeholder group is not enough.
+* Support the data gathering sessions with suitable props, such as task descriptions and prototypes if available.
+--
+--
+Include wide range of participants, Dont ban silly ideas, build one idea on top of another, keep record of your ideas, sharpen the focus, warm up
+-- Task description 10.6 --
+--
+Scenarios -> Much like personas, just with a specific activity instead. p 301.
+Mixed with a final goal for the (Persona -> scenario -> goal), 
+----------------------
+-- 10.6.2 Use cases --
+----------------------
+About user-system interaction (Much like assembly language)
+
+Task analysis is used mainly to investigate an existing situation, not to envision new products. It is used to analyze the underlying
+rationale and purpose of what people are doing: what are they trying to achieve, why are they trying to achieve it, and how are they going
+about it? The information gleaned from task analysis establishes a foundation of existing practices on which to build new requirements
+or design new tasks.
+--
+--
+Hierachical task analysis
+S1: Forming a goal,
+S2: Forming the intention
+S3: Specifying the action
+S4: Execute the action
+S5: Percieve the state of the world
+S6: Interpret the state of the world
+S7: Evaluate the outcome
+--
+--------------------------------------------------------
+-- 11 Prototyping --
+--------------------------------------------------------
+--
+
+
+--
+--------------------------------------------------------
+-- Graphic design --
+--------------------------------------------------------
+--
+
+---
+Layout and composition
+---
+* Be mindful of the visual hierarchy
+  - size, color, contrast, alignment, repetition, proximity, white space, and texture and style
+* Support natural eye movement patterns
+  - Z and F patterns
+* Organize content using well-established principles
+  - the golden ratio and the rule of thids
+
+---
+Six tips for choosing colors
+---
+* Learn 60-30-10 rule
+* Contrast is a friend
+* Consider psychology of colors
+* Don't forget cultural differences
+* Strive to color harmony
+* Steal ideas from nature
+
+---
+Typography and Fonts
+---
+* Types of fonts
+  - serif vs. sans serif, display fonts
+* Choosing fonts
+  - choose a font that fits your message and limit the number of
+* Manipulating fonts
+  - kerning, leading and tracking
+
+---
+Navigation, Content, and Ornament Graphics
+---
+* When adding graphics consider the function they serve
+
+-----------------------------------------------------------
+---
+Interaction types ---
+----
+* Instructing
+* Conversing
+* Manipulating
+* Exploring
+----
+
+
+
+
+---- READ BEFORE EXAM ----
+
+Chapters
+* 1, 2, 3
+* 6, 7, 8, 9, 10, 11
+* 13, 14, 15
+
+----- questions
+-------
+Chapters -> 1, 6, 9
+-------
+  What is interaction design? -> { Designing interactive products to support people in their everyday and working lives }
+  What is the process of interaction design? -> {  }
+  What is the user experience?
+  What are usability and user experience goals?
+  What interface types exist?
+-------
+-------
+Chapters -> 2, 3
+-------
+  How do people process information?
+  How do people make decisions?
+  What are conceptual models?
+  What is external cognition?
+  What interaction types exist?
+-------
+-------
+Chapters -> 7, 8
+-------
+  How do you prepare and perform interviews, questionnaire-based surveys, and observational studies?
+  How do you analyse and visualize the results of interviews, questionnaire-based surveys, and observational studies?
+-------
+-------
+Chapters -> 10
+-------
+  What kind of different requirements are there? 
+  How different data gathering techniques can be used in the requirements specification process? 
+  What are scenarios, use cases and use case diagrams? 
+-------
+-------
+Chapters -> 11
+-------
+  What is the propose of prototyping?
+  What different types of prototyping activities are there?
+  How can we develop prototypes from our design requirements?
+-------
+Graphic design
+-------
+  What visual elements can we use to catch the viewer's attention?
+  How should graphical elements be organized?
+  How can color and typography be used to affect the user experience?
+-------
+-------
+Chapters -> 6: Interfaces
+-------
+-------
+Chapters -> 13, 14, 15
+-------
+  How to conduct usability and UX evaluations?
+  How to conduct experiments?
+  What is heuristic evaluation?
+------
+
+
