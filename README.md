@@ -10,3 +10,13 @@ Programming for complex software systems (PCSS)<br>
 Audio Processing (AP)<br>
 Physical Interface Design (PID)<br>
 Design and Analysis of Experiments (DAE)<br>
+
+### 5th Semester
+Computer Graphics Programming (CGP)<br>
+Rendering and Animation Techniques (RAT)<br>
+Screen Media (SM)<br>
+
+### 6th Semester
+Artificial Intelligence (AP)<br>
+Game Design (GD)<br>
+Web and Social Media (WS)<br>
