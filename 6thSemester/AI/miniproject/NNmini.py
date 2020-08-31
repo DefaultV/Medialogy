@@ -74,6 +74,7 @@ for epoch in range(2500):
 
     # feed
     sum = np.dot(train_set, weights) + bias
+    print(sum,":sum")
     sig_sum = sigmoid(sum)
 
     # backprop
@@ -83,7 +84,8 @@ for epoch in range(2500):
 
     sigged = err_marg * sigmoid_der(sig_sum)
     weights -= learnrate * np.dot(train_set.T, sigged)
-
+    print(,(sigged))
+    print(sigged[0])
     for x in sigged:
         bias -= learnrate * x
 
